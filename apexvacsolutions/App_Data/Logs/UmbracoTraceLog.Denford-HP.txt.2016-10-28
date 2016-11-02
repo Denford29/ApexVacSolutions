@@ -1,0 +1,65 @@
+﻿ 2016-10-28 01:16:37,184 [P14496/D7/T57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2016-10-28 01:16:37,184 [P14496/D7/T57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2016-10-28 01:16:37,186 [P14496/D7/T57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2016-10-28 01:16:37,187 [P14496/D7/T57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2016-10-28 01:16:37,188 [P14496/D7/T100] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2016-10-28 01:16:37,188 [P14496/D7/T57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2016-10-28 01:16:37,188 [P14496/D7/T57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Terminating
+ 2016-10-28 01:16:37,188 [P14496/D7/T57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Waiting for tasks to complete
+ 2016-10-28 01:16:37,188 [P14496/D7/T57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2016-10-28 01:16:37,188 [P14496/D7/T57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2016-10-28 01:16:37,189 [P14496/D7/T162] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Tasks completed, terminated
+ 2016-10-28 01:16:37,190 [P14496/D7/T57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2016-10-28 01:16:37,190 [P14496/D7/T57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2016-10-28 01:16:37,190 [P14496/D7/T57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2016-10-28 01:16:37,191 [P14496/D7/T57] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2016-10-28 01:16:42,613 [P12040/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.3 application starting on DENFORD-HP
+ 2016-10-28 01:16:42,656 [P12040/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2016-10-28 01:16:42,681 [P12040/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 24ms)
+ 2016-10-28 01:16:42,795 [P12040/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2016-10-28 01:16:42,823 [P12040/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 27ms)
+ 2016-10-28 01:16:42,868 [P12040/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2016-10-28 01:16:42,870 [P12040/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 2ms)
+ 2016-10-28 01:16:42,871 [P12040/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2016-10-28 01:16:42,873 [P12040/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 2ms)
+ 2016-10-28 01:16:42,906 [P12040/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2016-10-28 01:16:42,908 [P12040/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 1ms)
+ 2016-10-28 01:16:42,908 [P12040/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2016-10-28 01:16:42,922 [P12040/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 14ms)
+ 2016-10-28 01:16:42,991 [P12040/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2016-10-28 01:16:42,992 [P12040/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2016-10-28 01:16:42,992 [P12040/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2016-10-28 01:16:42,993 [P12040/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2016-10-28 01:16:44,895 [P12040/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-10-28 01:16:45,333 [P12040/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-10-28 01:16:45,339 [P12040/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-10-28 01:16:45,378 [P12040/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2016-10-28 01:16:45,524 [P12040/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2016-10-28 01:16:45,525 [P12040/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2016-10-28 01:16:45,554 [P12040/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 3095ms)
+ 2016-10-28 01:16:46,083 [P12040/D2/T11] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://local.apexvacsolutions.com.au:80/umbraco (UmbracoModule request)
+ 2016-10-28 01:17:07,311 [P14496/D7/T78] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: HostingEnvironment
+
+_shutDownMessage=HostingEnvironment initiated shutdown
+HostingEnvironment caused shutdown
+
+_shutDownStack=   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   at System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   at System.Web.Hosting.PipelineRuntime.StopProcessing()
+ 2016-10-28 20:12:39,091 [P12040/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2016-10-28 20:12:39,091 [P12040/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2016-10-28 20:12:39,106 [P12040/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2016-10-28 20:12:39,106 [P12040/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2016-10-28 20:12:39,106 [P12040/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2016-10-28 20:12:39,106 [P12040/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2016-10-28 20:12:39,106 [P12040/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Terminating
+ 2016-10-28 20:12:39,106 [P12040/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Waiting for tasks to complete
+ 2016-10-28 20:12:39,106 [P12040/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Tasks completed, terminated
+ 2016-10-28 20:12:40,153 [P12040/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2016-10-28 20:12:40,153 [P12040/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2016-10-28 20:12:40,153 [P12040/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2016-10-28 20:12:40,153 [P12040/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2016-10-28 20:12:40,153 [P12040/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2016-10-28 20:12:40,153 [P12040/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated

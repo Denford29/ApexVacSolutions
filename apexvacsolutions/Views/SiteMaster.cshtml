@@ -1,0 +1,65 @@
+﻿<html>
+<head>
+
+    @Html.Partial("Master/HeaderContent")
+
+    <!-- Bootstrap -->
+    <link href="/Css/bootstrap.css" rel="stylesheet">
+    <!-- Links -->
+    <link rel="stylesheet" href="/Css/camera.css">
+    <link rel="stylesheet" href="/Css/google-map.css">
+    <link rel="stylesheet" href="/Css/mailform-sub.css">
+    <link rel="stylesheet" href="/Css/search.css">
+    <!--JS-->
+    <script src="/Scripts/jquery.js"></script>
+    <script src="/Scripts/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/Scripts/rd-smoothscroll.min.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="/Scripts/html5shiv.js"></script>
+      <script src="/Scripts/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="/Scripts/device.min.js"></script>
+</head>
+<body>
+    <div class="page">
+        <!--========================================================
+                                  HEADER
+        =========================================================-->
+        <header>
+
+            @Html.Partial("Master/MainNavigation")
+
+            @Html.Partial("Master/PageSlider")
+
+        </header>
+
+        <!--========================================================
+                                      CONTENT
+            =========================================================-->
+        <main>
+
+            @RenderBody()
+
+        </main>
+
+        <!--========================================================
+        FOOTER
+        =========================================================-->
+
+        @Html.Partial("Master/SiteFooter")
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    @*<script src="/Scripts/bootstrap.min.js"></script>*@
+    <script src="/Scripts/bootstrap.js"></script>
+
+    <script src="/Scripts/tm-scripts.js"></script>
+
+    <!-- </script> -->
+
+</body>
+</html>

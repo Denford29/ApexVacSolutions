@@ -1,0 +1,75 @@
+﻿ 2016-10-20 00:26:32,093 [P1092/D2/T163] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-10-19 00:26:32
+ 2016-10-20 04:26:32,107 [P1092/D2/T191] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-10-19 04:26:32
+ 2016-10-20 08:26:32,128 [P1092/D2/T151] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-10-19 08:26:32
+ 2016-10-20 09:07:18,050 [P1092/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2016-10-20 09:07:18,050 [P1092/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2016-10-20 09:07:18,052 [P1092/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2016-10-20 09:07:18,052 [P1092/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2016-10-20 09:07:18,052 [P1092/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2016-10-20 09:07:18,052 [P1092/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2016-10-20 09:07:18,052 [P1092/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Terminating
+ 2016-10-20 09:07:18,052 [P1092/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Waiting for tasks to complete
+ 2016-10-20 09:07:18,057 [P1092/D2/T82] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2016-10-20 09:07:18,059 [P1092/D2/T71] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Tasks completed, terminated
+ 2016-10-20 09:07:18,059 [P1092/D2/T77] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2016-10-20 09:07:18,059 [P1092/D2/T151] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2016-10-20 09:07:18,064 [P1092/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2016-10-20 09:07:18,064 [P1092/D2/T35] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2016-10-20 09:07:18,065 [P1092/D2/T25] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2016-10-20 09:07:48,384 [P1092/D2/T79] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: ConfigurationChange
+
+_shutDownMessage=Change in App_Offline.htm
+HostingEnvironment initiated shutdown
+Change in App_Offline.htm
+Change in App_Offline.htm
+Change in App_Offline.htm
+Change in App_Offline.htm
+Change in App_Offline.htm
+HostingEnvironment caused shutdown
+
+_shutDownStack=   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   at System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   at System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   at System.Web.HttpRuntime.OnAppOfflineFileChange(Object sender, FileChangeEvent e)
+   at System.Web.DirectoryMonitor.FireNotifications()
+   at System.Web.Util.WorkItem.CallCallbackWithAssert(WorkItemCallback callback)
+   at System.Web.Util.WorkItem.OnQueueUserWorkItemCompletion(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+ 2016-10-20 09:09:21,294 [P1092/D3/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.3 application starting on DENFORD-HP
+ 2016-10-20 09:09:21,349 [P1092/D3/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2016-10-20 09:09:21,375 [P1092/D3/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 25ms)
+ 2016-10-20 09:09:21,482 [P1092/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2016-10-20 09:09:21,870 [P1092/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 388ms)
+ 2016-10-20 09:09:21,904 [P1092/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2016-10-20 09:09:21,927 [P1092/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 22ms)
+ 2016-10-20 09:09:21,928 [P1092/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2016-10-20 09:09:21,948 [P1092/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 20ms)
+ 2016-10-20 09:09:21,978 [P1092/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2016-10-20 09:09:21,999 [P1092/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 20ms)
+ 2016-10-20 09:09:21,999 [P1092/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2016-10-20 09:09:22,017 [P1092/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 17ms)
+ 2016-10-20 09:09:22,072 [P1092/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2016-10-20 09:09:22,092 [P1092/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 19ms)
+ 2016-10-20 09:09:22,092 [P1092/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2016-10-20 09:09:22,108 [P1092/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 15ms)
+ 2016-10-20 09:09:24,061 [P1092/D3/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-10-20 09:09:24,495 [P1092/D3/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-10-20 09:09:24,501 [P1092/D3/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-10-20 09:09:24,538 [P1092/D3/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2016-10-20 09:09:24,702 [P1092/D3/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2016-10-20 09:09:24,703 [P1092/D3/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2016-10-20 09:09:24,734 [P1092/D3/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 3624ms)
+ 2016-10-20 09:09:24,971 [P1092/D3/T6] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://local.apexvacsolutions.com.au:80/umbraco (UmbracoModule request)
+ 2016-10-20 09:10:26,509 [P1092/D3/T78] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-10-19 09:10:26
+ 2016-10-20 09:10:28,109 [P1092/D3/T151] INFO  umbraco.content - Load Xml from file...
+ 2016-10-20 09:10:28,137 [P1092/D3/T151] INFO  umbraco.content - Loaded Xml from file.
+ 2016-10-20 09:10:28,165 [P1092/D3/T151] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2016-10-20 09:10:28,189 [P1092/D3/T151] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 24ms)
+ 2016-10-20 13:10:26,529 [P1092/D3/T64] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-10-19 13:10:26
+ 2016-10-20 17:10:26,549 [P1092/D3/T64] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-10-19 17:10:26
+ 2016-10-20 21:10:28,685 [P1092/D3/T64] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-10-19 21:10:28

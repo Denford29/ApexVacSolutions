@@ -1,0 +1,226 @@
+﻿ 2016-10-13 03:06:01,348 [P8708/D10/T159] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-10-12 03:06:01
+ 2016-10-13 07:06:01,365 [P8708/D10/T159] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-10-12 07:06:01
+ 2016-10-13 11:06:01,385 [P8708/D10/T159] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-10-12 11:06:01
+ 2016-10-13 15:06:01,406 [P8708/D10/T159] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-10-12 15:06:01
+ 2016-10-13 19:06:01,426 [P8708/D10/T159] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-10-12 19:06:01
+ 2016-10-13 21:08:11,875 [P8708/D10/T212] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Terminating
+ 2016-10-13 21:08:11,875 [P8708/D10/T212] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Waiting for tasks to complete
+ 2016-10-13 21:08:11,876 [P8708/D10/T212] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2016-10-13 21:08:11,877 [P8708/D10/T212] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2016-10-13 21:08:11,877 [P8708/D10/T212] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2016-10-13 21:08:11,878 [P8708/D10/T212] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2016-10-13 21:08:11,879 [P8708/D10/T206] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Tasks completed, terminated
+ 2016-10-13 21:08:11,879 [P8708/D10/T159] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2016-10-13 21:08:11,879 [P8708/D10/T209] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2016-10-13 21:08:12,134 [P8708/D10/T212] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2016-10-13 21:08:12,134 [P8708/D10/T212] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2016-10-13 21:08:12,135 [P8708/D10/T212] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2016-10-13 21:08:12,135 [P8708/D10/T212] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2016-10-13 21:08:12,135 [P8708/D10/T212] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2016-10-13 21:08:12,135 [P8708/D10/T266] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2016-10-13 21:08:29,886 [P8708/D11/T104] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.3 application starting on DENFORD-HP
+ 2016-10-13 21:08:29,969 [P8708/D11/T104] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2016-10-13 21:08:29,987 [P8708/D11/T104] INFO  Umbraco.Core.PluginManager - Hash determined (took 18ms)
+ 2016-10-13 21:08:30,121 [P8708/D11/T104] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2016-10-13 21:08:30,528 [P8708/D11/T104] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 407ms)
+ 2016-10-13 21:08:30,560 [P8708/D11/T104] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2016-10-13 21:08:30,576 [P8708/D11/T104] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 16ms)
+ 2016-10-13 21:08:30,577 [P8708/D11/T104] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2016-10-13 21:08:30,598 [P8708/D11/T104] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 20ms)
+ 2016-10-13 21:08:30,625 [P8708/D11/T104] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2016-10-13 21:08:30,642 [P8708/D11/T104] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 17ms)
+ 2016-10-13 21:08:30,643 [P8708/D11/T104] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2016-10-13 21:08:30,660 [P8708/D11/T104] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 16ms)
+ 2016-10-13 21:08:30,710 [P8708/D11/T104] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2016-10-13 21:08:30,726 [P8708/D11/T104] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 16ms)
+ 2016-10-13 21:08:30,727 [P8708/D11/T104] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2016-10-13 21:08:30,744 [P8708/D11/T104] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 17ms)
+ 2016-10-13 21:08:32,726 [P8708/D11/T104] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-10-13 21:08:33,224 [P8708/D11/T104] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-10-13 21:08:33,242 [P8708/D11/T104] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-10-13 21:08:33,279 [P8708/D11/T104] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2016-10-13 21:08:33,469 [P8708/D11/T104] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2016-10-13 21:08:33,469 [P8708/D11/T104] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2016-10-13 21:08:33,496 [P8708/D11/T104] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 3780ms)
+ 2016-10-13 21:08:33,753 [P8708/D11/T206] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://local.apexvacsolutions.com.au:80/umbraco (UmbracoModule request)
+ 2016-10-13 21:08:34,070 [P8708/D11/T206] INFO  umbraco.content - Load Xml from file...
+ 2016-10-13 21:08:34,078 [P8708/D11/T206] INFO  umbraco.content - Loaded Xml from file.
+ 2016-10-13 21:08:35,108 [P8708/D11/T206] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2016-10-13 21:08:35,137 [P8708/D11/T206] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 28ms)
+ 2016-10-13 21:08:42,149 [P8708/D10/T225] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: BinDirChangeOrDirectoryRename
+
+_shutDownMessage=Change Notification for critical directories.
+bin dir change or directory rename
+HostingEnvironment initiated shutdown
+Change Notification for critical directories.
+bin dir change or directory rename
+Change Notification for critical directories.
+bin dir change or directory rename
+Change Notification for critical directories.
+bin dir change or directory rename
+Change Notification for critical directories.
+bin dir change or directory rename
+Change Notification for critical directories.
+bin dir change or directory rename
+Change Notification for critical directories.
+bin dir change or directory rename
+Change Notification for critical directories.
+bin dir change or directory rename
+Change Notification for critical directories.
+bin dir change or directory rename
+Change Notification for critical directories.
+bin dir change or directory rename
+Change Notification for critical directories.
+bin dir change or directory rename
+Change Notification for critical directories.
+bin dir change or directory rename
+Change in C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\dc1df593\db96338b\hash\hash.web
+Change in C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Temporary ASP.NET Files\root\dc1df593\db96338b\hash\hash.web
+HostingEnvironment caused shutdown
+
+_shutDownStack=   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   at System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   at System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   at System.Web.HttpRuntime.OnCriticalDirectoryChange(Object sender, FileChangeEvent e)
+   at System.Web.FileChangesMonitor.OnCriticaldirChange(Object sender, FileChangeEvent e)
+   at System.Web.DirectoryMonitor.FireNotifications()
+   at System.Web.Util.WorkItem.CallCallbackWithAssert(WorkItemCallback callback)
+   at System.Web.Util.WorkItem.OnQueueUserWorkItemCompletion(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+ 2016-10-13 21:08:45,469 [P8708/D11/T66] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-1.jpg?1476355125069 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:09:34,188 [P8708/D11/T201] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-10-12 21:09:34
+ 2016-10-13 21:09:34,343 [P8708/D11/T266] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2016-10-13 21:09:34,376 [P8708/D11/T266] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 32ms)
+ 2016-10-13 21:09:46,175 [P8708/D11/T266] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-1.jpg?1476355185916 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:09:51,412 [P8708/D11/T266] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2016-10-13 21:13:01,011 [P8708/D11/T66] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-1.jpg?1476355380645 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:18:34,694 [P8708/D11/T66] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-1.jpg?1476355714380 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:20:42,753 [P8708/D11/T206] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-1.jpg?1476355714380 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:20:44,687 [P8708/D11/T211] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-1.jpg?1476355714380 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:20:47,047 [P8708/D11/T66] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-1.jpg?1476355714380 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:21:02,240 [P8708/D11/T266] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-1.jpg?1476355714380 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:21:09,411 [P8708/D11/T163] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-1.jpg?1476355714380 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:28:44,371 [P8708/D11/T193] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-1.jpg?1476356323838 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:33:23,678 [P8708/D11/T182] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-1.jpg?1476356323838 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:34:58,448 [P8708/D11/T150] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-2.jpg?1476356698079 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:35:06,921 [P8708/D11/T142] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-3.jpg?1476356706807 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:35:16,662 [P8708/D11/T174] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-4.jpg?1476356716577 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:35:26,498 [P8708/D11/T150] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-5.jpg?1476356726281 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:35:58,052 [P8708/D11/T174] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-4.jpg?1476356716577 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:35:58,068 [P8708/D11/T150] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-2.jpg?1476356698079 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:36:06,680 [P8708/D11/T160] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-2.jpg?1476356698079 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:36:15,276 [P8708/D11/T150] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-4.jpg?1476356716577 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:36:54,507 [P8708/D11/T182] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-3.jpg?1476356706807 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:37:09,613 [P8708/D11/T182] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-3.jpg?1476356706807 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:37:09,619 [P8708/D11/T163] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-2.jpg?1476356698079 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:37:09,645 [P8708/D11/T142] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-4.jpg?1476356716577 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:37:14,040 [P8708/D11/T142] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-5.jpg?1476356726281 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:37:23,937 [P8708/D11/T142] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-5.jpg?1476356726281 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:37:33,638 [P8708/D11/T187] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-2.jpg?1476356698079 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:37:52,990 [P8708/D11/T167] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-3.jpg?1476356706807 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:38:02,720 [P8708/D11/T167] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-5.jpg?1476356726281 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:38:20,640 [P8708/D11/T167] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-2.jpg?1476356698079 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:38:32,229 [P8708/D11/T167] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-2.jpg?1476356698079 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:38:42,037 [P8708/D11/T203] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-4.jpg?1476356716577 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:39:21,071 [P8708/D11/T169] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-2.jpg?1476356698079 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:39:31,993 [P8708/D11/T202] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-4.jpg?1476356716577 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:39:40,540 [P8708/D11/T202] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-4.jpg?1476356716577 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:40:09,783 [P8708/D11/T111] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-2.jpg?1476356698079 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:40:10,703 [P8708/D11/T124] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-2.jpg?1476356698079 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:40:14,389 [P8708/D11/T169] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-3.jpg?1476356706807 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:40:19,555 [P8708/D11/T169] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-3.jpg?1476356706807 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:40:29,368 [P8708/D11/T169] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-5.jpg?1476356726281 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:40:42,473 [P8708/D11/T190] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-5.jpg?1476356726281 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:40:42,473 [P8708/D11/T203] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-4.jpg?1476356716577 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:40:48,854 [P8708/D11/T190] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-2.jpg?1476356698079 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:41:18,285 [P8708/D11/T190] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-4.jpg?1476356716577 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:41:35,007 [P8708/D11/T180] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-2.jpg?1476356698079 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:41:45,906 [P8708/D11/T100] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-5.jpg?1476356726281 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:42:36,830 [P8708/D11/T181] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-2.jpg?1476356698079 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:43:02,471 [P8708/D11/T202] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-2.jpg?1476356698079 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:43:26,915 [P8708/D11/T202] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-4.jpg?1476356716577 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:43:51,906 [P8708/D11/T202] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-4.jpg?1476356716577 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:44:16,972 [P8708/D11/T202] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-5.jpg?1476356726281 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:45:05,776 [P8708/D11/T190] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-3.jpg?1476356706807 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:45:33,718 [P8708/D11/T224] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-3.jpg?1476356706807 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:45:58,819 [P8708/D11/T180] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-5.jpg?1476356726281 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:47:15,841 [P8708/D11/T220] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-2.jpg?1476356698079 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:47:40,960 [P8708/D11/T224] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-3.jpg?1476356706807 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:48:05,925 [P8708/D11/T224] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-5.jpg?1476356726281 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:48:55,999 [P8708/D11/T224] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-2.jpg?1476356698079 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:49:02,261 [P8708/D11/T224] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-5.jpg?1476356726281 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:49:21,028 [P8708/D11/T220] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-2.jpg?1476356698079 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:49:46,041 [P8708/D11/T202] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-3.jpg?1476356706807 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:50:12,049 [P8708/D11/T168] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-5.jpg?1476356726281 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:50:37,059 [P8708/D11/T166] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-5.jpg?1476356726281 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:51:02,113 [P8708/D11/T214] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-2.jpg?1476356698079 could not be understood by the server due to malformed syntax.
+ 2016-10-13 21:51:18,814 [P8708/D11/T224] ERROR ImageProcessor.Web.HttpModules.ImageProcessingModule - 
+ImageProcessor.Common.Exceptions.ImageProcessingException: ProcessImageAsync 645 : The request /Images/hydro-excavation-3.jpg?1476356706807 could not be understood by the server due to malformed syntax.

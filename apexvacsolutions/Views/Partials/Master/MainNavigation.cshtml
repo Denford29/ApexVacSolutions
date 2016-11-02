@@ -1,0 +1,146 @@
+﻿@inherits UmbracoTemplatePage
+@{
+    var siteDefaultName = "Apex Vac Solutions ";
+    var logoImageUrl = "/Images/Apex-Logo.png";
+    var siteSetting = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "GlobalSettings");
+
+    if (siteSetting != null && siteSetting.Id > 0 && siteSetting.Descendants("SiteDetails").Any())
+    {
+        var siteDetailsPage = siteSetting.Descendants("SiteDetails").FirstOrDefault();
+        if (siteDetailsPage != null && siteDetailsPage.Id > 0)
+        {
+            if (siteDetailsPage.HasProperty("siteName") && siteDetailsPage.HasValue("siteName"))
+            {
+                siteDefaultName = siteDetailsPage.GetPropertyValue("siteName").ToString();
+            }
+            if (siteDetailsPage.HasProperty("mainHeaderLogo") && siteDetailsPage.HasValue("mainHeaderLogo"))
+            {
+                var mediaItem = Umbraco.TypedMedia(siteDetailsPage.GetPropertyValue("mainHeaderLogo").ToString());
+                if (mediaItem != null && mediaItem.Id > 0)
+                {
+                    logoImageUrl = !string.IsNullOrEmpty(mediaItem.GetCropUrl("Logo")) ? mediaItem.GetCropUrl("Logo") : mediaItem.GetCropUrl(400, 77);
+                }
+            }
+        }
+
+        var homePage = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "HomePage");
+
+        <div id="stuck_container" class="stuck_container">
+            <nav class="navbar navbar-default navbar-static-top ">
+                <div class="container">
+                    <div class="navbar-header">
+                        <h1 class="navbar-brand">
+                            <a data-type="rd-navbar-brand" href="/" title="@siteDefaultName">
+                                <img src="@logoImageUrl" alt="@siteDefaultName" />
+                            </a>
+                        </h1>
+                    </div>
+
+                    @if (homePage != null && homePage.Id > 0)
+                    {
+                        var homeTitle = homePage.Name;
+                        if (homePage.HasProperty("linkTittle") && homePage.HasValue("linkTittle"))
+                        {
+                            homeTitle = homePage.GetPropertyValue("linkTittle").ToString();
+                        }
+                        <ul class="navbar-nav sf-menu navbar-right" data-type="navbar">
+                            <li @(homePage.Id == Model.Content.Id ? "class=active" : null)>
+                                <a href="/" title="@homeTitle - @siteDefaultName">
+                                    @homeTitle
+                                </a>
+                            </li>
+                            
+                            @if (homePage.Children.Any())
+                            {
+                                foreach (var landingPage in homePage.Children.Where(childPage => childPage.IsVisible() && !childPage.GetPropertyValue<bool>("hideFromMenu")))
+                                {
+                                    var pageTitle = landingPage.Name;
+                                    if (landingPage.HasProperty("linkTittle") && landingPage.HasValue("linkTittle"))
+                                    {
+                                        pageTitle = landingPage.GetPropertyValue("linkTittle").ToString();
+                                    }
+                                    var hasChildren = landingPage.Children.Any(childPage => childPage.IsVisible() && !childPage.GetPropertyValue<bool>("hideFromMenu"));
+                                    if (!hasChildren)
+                                    {
+                                        <li @(landingPage.Id == Model.Content.Id ? "class=active" : Model.Content.AncestorOrSelf(2).Id == landingPage.Id ? "class=active" : null)>
+                                            <a href="@landingPage.Url" title="@pageTitle - @siteDefaultName">
+                                                @pageTitle
+                                            </a>
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        <li @(landingPage.Id == Model.Content.Id ? "class=active dropdown" : Model.Content.AncestorOrSelf(2).Id == landingPage.Id ? "class=active dropdown" : "class=dropdown")>
+                                            <a href="@landingPage.Url" title="@pageTitle - @siteDefaultName">
+                                                @pageTitle
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                @foreach (var childPage in landingPage.Children.Where(childPage => childPage.IsVisible() && !childPage.GetPropertyValue<bool>("hideFromMenu")))
+                                                {
+                                                    var childPageTitle = childPage.Name;
+                                                    if (childPage.HasProperty("linkTittle") && childPage.HasValue("linkTittle"))
+                                                    {
+                                                        childPageTitle = childPage.GetPropertyValue("linkTittle").ToString();
+                                                    }
+                                                    <li @(childPage.Id == Model.Content.Id ? "class=active" : null)>
+                                                        <a href="@childPage.Url" title="@childPageTitle - @siteDefaultName">
+                                                            @childPageTitle
+                                                        </a>
+                                                    </li>
+                                                }
+                                            </ul>
+                                        </li>
+                                    }
+                                }
+                            }
+
+                            @*<li>
+                                <a href="/">About</a>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="/">Hydro Excavation Services</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">Trenching</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Pot Holing</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Debris Removal</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Exposing Utilities</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="/">Contacts</a>
+                            </li>*@
+                        </ul>
+                    }
+                </div>
+            </nav>
+
+            <section>
+                <div class="container">
+                    <div class="sform">
+                        <a class="search-form_toggle" href="#"></a>
+
+                        <form class="search-form" action="/" method="GET" accept-charset="utf-8">
+                            <label class="search-form_label">
+                                <input class="search-form_input" type="text" name="s" autocomplete="off"
+                                       placeholder="Search" />
+                                <span class="search-form_liveout"></span>
+                            </label>
+                            <button class="search-form_submit fa-search" type="submit"></button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    }
+}

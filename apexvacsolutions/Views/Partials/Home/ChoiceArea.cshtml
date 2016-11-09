@@ -1,6 +1,82 @@
 ﻿@inherits UmbracoTemplatePage
 @{
-    <section class="well well5">
+
+    var siteSetting = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "GlobalSettings");
+    if (siteSetting != null && siteSetting.Id > 0 && siteSetting.Descendants("choiceItem").Any())
+    {
+        var r = new Random();
+        var choicesItemCount = siteSetting.Descendants("choiceItem").Count(x => x.IsVisible());
+        var choicesItemList = siteSetting.Descendants("choiceItem").
+                                                                Where(x => x.IsVisible()).OrderBy(x => r.Next()).
+                                                                Take(choicesItemCount).ToList();
+
+        var choicesParents = siteSetting.Descendants("choicesContainer").ToList();
+
+        <section class="well well5">
+            <div class="container">
+                @if (choicesParents.Any())
+                {
+                    var choicesParentPage = choicesParents.FirstOrDefault();
+                    if (choicesParentPage != null && choicesParentPage.Id > 0)
+                    {
+                        if (choicesParentPage.HasProperty("choicesHeading") && choicesParentPage.HasValue("choicesHeading"))
+                        {
+                            <h3 class="text-center">
+                                @choicesParentPage.GetPropertyValue("choicesHeading").ToString()
+                            </h3>
+                        }
+                        if (choicesParentPage.HasProperty("choicesText") && choicesParentPage.HasValue("choicesText"))
+                        {
+                            <p class="text-center">
+                                @choicesParentPage.GetPropertyValue("choicesText").ToString()
+                            </p>
+                        }
+                    }
+                }
+                
+                @if (choicesItemList.Any())
+                {
+                    <div class="row">
+                        <ul class="icon-list wow fadeInLeft" data-wow-duration="2s">
+                            @foreach (var choiceItem in choicesItemList)
+                            {
+                                var iconText = "fa-info";
+                                if (choiceItem.HasProperty("icon") && choiceItem.HasValue("icon"))
+                                {
+                                    iconText = choiceItem.GetPropertyValue("icon").ToString();
+                                }
+                                <li class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="row">
+                                        <div class="col-sm-3 p-r-0 iconContainer">
+                                            <span class="icon @iconText fa-3x fa-fw pull-right"></span>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            @if (choiceItem.HasProperty("itemHeading") && choiceItem.HasValue("itemHeading"))
+                                            {
+                                            <h6>
+                                                @choiceItem.GetPropertyValue("itemHeading").ToString()
+                                            </h6>
+                                            }
+                                            @if (choiceItem.HasProperty("itemText") && choiceItem.HasValue("itemText"))
+                                            {
+                                            <p>
+                                                @choiceItem.GetPropertyValue("itemText").ToString()
+                                            </p>
+                                            }
+                                        </div>
+                                    </div>
+                                </li>
+                                }
+                        </ul>
+                    </div>
+                }
+            </div>
+        </section>
+    }
+
+}
+
+@*<section class="well well5">
         <div class="container">
             <h3 class="text-center">
                 Why Choose Us?
@@ -83,5 +159,4 @@
 
             </div>
         </div>
-    </section>
-}
+    </section>*@

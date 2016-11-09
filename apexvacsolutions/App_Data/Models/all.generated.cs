@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "e1b40101f14cb6f")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "45995dc6d79fa8ab")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -81,15 +81,6 @@ namespace Umbraco.Web.PublishedContentModels
 		public string BrowserTitle
 		{
 			get { return this.GetPropertyValue<string>("browserTitle"); }
-		}
-
-		///<summary>
-		/// Header Image Text: Enter a new line to add a heading used in the image.
-		///</summary>
-		[ImplementPropertyType("headerImageText")]
-		public string HeaderImageText
-		{
-			get { return this.GetPropertyValue<string>("headerImageText"); }
 		}
 
 		///<summary>
@@ -621,6 +612,103 @@ namespace Umbraco.Web.PublishedContentModels
 		public string SliderText
 		{
 			get { return this.GetPropertyValue<string>("sliderText"); }
+		}
+	}
+
+	/// <summary>Choices Container</summary>
+	[PublishedContentModel("choicesContainer")]
+	public partial class ChoicesContainer : GlobalSettings
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "choicesContainer";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public ChoicesContainer(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ChoicesContainer, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Choices Heading
+		///</summary>
+		[ImplementPropertyType("choicesHeading")]
+		public string ChoicesHeading
+		{
+			get { return this.GetPropertyValue<string>("choicesHeading"); }
+		}
+
+		///<summary>
+		/// Choices Text
+		///</summary>
+		[ImplementPropertyType("choicesText")]
+		public string ChoicesText
+		{
+			get { return this.GetPropertyValue<string>("choicesText"); }
+		}
+	}
+
+	/// <summary>Choice Item</summary>
+	[PublishedContentModel("choiceItem")]
+	public partial class ChoiceItem : GlobalSettings
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "choiceItem";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public ChoiceItem(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ChoiceItem, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Icon: Select the icon for the item
+		///</summary>
+		[ImplementPropertyType("icon")]
+		public Newtonsoft.Json.Linq.JToken Icon
+		{
+			get { return this.GetPropertyValue<Newtonsoft.Json.Linq.JToken>("icon"); }
+		}
+
+		///<summary>
+		/// Item Heading
+		///</summary>
+		[ImplementPropertyType("itemHeading")]
+		public string ItemHeading
+		{
+			get { return this.GetPropertyValue<string>("itemHeading"); }
+		}
+
+		///<summary>
+		/// Item Text
+		///</summary>
+		[ImplementPropertyType("itemText")]
+		public string ItemText
+		{
+			get { return this.GetPropertyValue<string>("itemText"); }
 		}
 	}
 

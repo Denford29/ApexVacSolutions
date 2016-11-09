@@ -444,6 +444,7 @@
     <Content Include="Css\bootstrap.css" />
     <Content Include="Css\camera.css" />
     <Content Include="Css\contact-form.css" />
+    <Content Include="Css\font-awesome.min.css" />
     <Content Include="Css\google-map.css" />
     <Content Include="Css\jquery.fancybox.css" />
     <Content Include="Css\jumbotron.css" />

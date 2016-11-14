@@ -374,6 +374,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\ContactModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -496,6 +497,7 @@
     <Content Include="Css\thumbnails.css" />
     <Content Include="Css\tm_panel.css" />
     <Content Include="Css\variables.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\material-design.svg" />
     <Content Include="Images\Apex-Logo.png" />
@@ -518,6 +520,7 @@
     <Content Include="Images\New-Technologies.png" />
     <Content Include="Images\parallax1.jpg" />
     <Content Include="Images\project-management.png" />
+    <Content Include="Images\Services.jpg" />
     <Content Include="Images\spritesheet.png" />
     <Content Include="Index.html" />
     <Content Include="Media\1001\apex-logo-new.png" />
@@ -773,6 +776,12 @@
     <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
     <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Views\Partials\Master\ContactForm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -3338,6 +3347,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
     <Folder Include="Views\MacroPartials\" />
   </ItemGroup>
   <PropertyGroup>

@@ -1,52 +1,41 @@
-﻿@inherits UmbracoTemplatePage
+﻿@using Archetype.Models
+@inherits UmbracoTemplatePage
 @{
-    <section class="well well1">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInLeft" data-wow-delay=".9s">
-                    <img src="/Images/Project-Management.png" alt="" />
-                    <h5 class="ins_r">
-                        Project
-                        Management
-                    </h5>
-                    <p class="txt-light">
-                        We will plan everything for you from start to finish.
-                    </p>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInLeft" data-wow-delay=".7s">
-                    <img src="/Images/Building-Innovation.png" alt="" />
-                    <h5 class="ins_r">
-                        Building
-                        Innovation
-                    </h5>
-                    <p class="txt-light">
-                        We have the best equipment available for any job.
-                    </p>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInLeft" data-wow-delay=".5s">
-                    <img src="/Images/Inspection-Testing.png" alt="" />
-                    <h5 class="ins_r">
-                        Inspection
-                        & Testing
-                    </h5>
-                    <p class="txt-light">
-                        All inspection and testing is done to industry standard.
-                    </p>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInLeft" data-wow-delay=".3s">
-                    <img src="/Images/New-Technologies.png" alt="" />
-                    <h5 class="ins_r">
-                        New
-                        Technologies
-                    </h5>
-                    <p class="txt-light">
-                        With the latest technologies to hand, we use the latest and best equipment available.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    var homePage = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "HomePage");
+    if (homePage != null && homePage.Id > 0 && homePage.GetPropertyValue<ArchetypeModel>("footerItems") != null)
+    {
+        var homeFooterArchtype = homePage.GetPropertyValue<ArchetypeModel>("footerItems");
+        if (homeFooterArchtype.Fieldsets.Any())
+        {
+            var firstSection = homeFooterArchtype.First();
+            if (!string.IsNullOrEmpty(firstSection.GetValue("itemHeading")))
+            {
+                <section class="well well3">
+                    <div class="container">
+                        <div class="row">
+                            @foreach (var fieldset in homeFooterArchtype)
+                            {
+                                var footerItemHeading = fieldset.GetValue("itemHeading");
+                                var footerItemText = fieldset.GetValue("itemText");
+                                var footerIcon = fieldset.GetValue("iconImage");
+                                if (string.IsNullOrWhiteSpace(footerIcon))
+                                {
+                                    footerIcon = "fa-info";
+                                }
+                                <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInLeft text-center" data-wow-delay=".9s">
+                                    <span class="icon @footerIcon fa-5x fa-fw"></span>
+                                    <h5 class="ins_r">
+                                        @footerItemHeading
+                                    </h5>
+                                    <p class="txt-light">
+                                        @footerItemText
+                                    </p>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </section>
+            }
+        }
+    }
 }

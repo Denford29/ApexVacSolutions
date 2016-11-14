@@ -2590,6 +2590,8 @@ footer {
 
     footer .rights a {
         white-space: nowrap;
+        font-size: 16px;
+        padding-top: 15px;
     }
 
     footer .rights p {
@@ -2868,7 +2870,7 @@ h3 + * {
     }
 }
 
-.ins_r {
+/*.ins_r {
     padding-right: 18%;
 }
 
@@ -2876,7 +2878,7 @@ h3 + * {
     .ins_r {
         padding-right: 1%;
     }
-}
+}*/
 
 @media (min-width: 1200px) {
     .inset-1 {
@@ -3578,7 +3580,7 @@ p.big {
 
 .link-list {
     min-width: 100px;
-    margin-top: 6px;
+    margin-top: 15px;
 }
 
     .link-list .icon {
@@ -3604,12 +3606,20 @@ p.big {
             margin-top: 8px;
         }
 
-        .link-list li a:hover {
+        /*.link-list li a:hover {
             color: #efb814;
         }
 
             .link-list li a:hover .icon:before {
                 color: #efb814;
+            }*/
+
+        .link-list li a {
+            color: #ffffff;
+        }
+
+            .link-list li a:hover .icon:before {
+                color: #ffffff;
             }
 
 .icon-1 {
@@ -9558,40 +9568,40 @@ a.list-group-item-danger {
 }
 
 .well1 {
-    padding-bottom: 95px;
-    padding-top: 100px;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 @media (max-width: 767px) {
     .well1 {
-        padding-top: 70px;
-        padding-bottom: 70px;
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
 }
 
 .well2 {
-    padding-bottom: 187px;
-    padding-top: 109px;
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
 
 @media (max-width: 767px) {
     .well2 {
-        padding-top: 90px;
-        padding-bottom: 90px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 
 .well3 {
-    padding-bottom: 88px;
-    padding-top: 129px;
-    margin-top: -75px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    /*margin-top: -75px;*/
 }
 
 @media (max-width: 767px) {
     .well3 {
         margin-top: 0;
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 }
 
@@ -9602,14 +9612,14 @@ a.list-group-item-danger {
 }
 
 .well4 {
-    padding-bottom: 101px;
-    padding-top: 92px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 @media (max-width: 767px) {
     .well4 {
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
 
@@ -9619,8 +9629,8 @@ a.list-group-item-danger {
 }
 
 .well5 {
-    padding-bottom: 74px;
-    padding-top: 55px;
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
 
 .well5-mod {
@@ -9629,8 +9639,8 @@ a.list-group-item-danger {
 }
 
 .well6 {
-    padding-bottom: 38px;
-    padding-top: 42px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .well_foot-1 {
@@ -9639,8 +9649,8 @@ a.list-group-item-danger {
 }
 
 .well_foot-2 {
-    padding-top: 36px;
-    padding-bottom: 41px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .well7 {

@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "45995dc6d79fa8ab")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "505117b224083e24")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -216,6 +216,15 @@ namespace Umbraco.Web.PublishedContentModels
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
+
+		///<summary>
+		/// Footer Items
+		///</summary>
+		[ImplementPropertyType("footerItems")]
+		public Archetype.Models.ArchetypeModel FooterItems
+		{
+			get { return this.GetPropertyValue<Archetype.Models.ArchetypeModel>("footerItems"); }
+		}
 	}
 
 	/// <summary>Standard Text Page</summary>
@@ -312,6 +321,15 @@ namespace Umbraco.Web.PublishedContentModels
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
+
+		///<summary>
+		/// Services Items
+		///</summary>
+		[ImplementPropertyType("servicesItems")]
+		public Archetype.Models.ArchetypeModel ServicesItems
+		{
+			get { return this.GetPropertyValue<Archetype.Models.ArchetypeModel>("servicesItems"); }
+		}
 	}
 
 	/// <summary>Service Page</summary>
@@ -392,15 +410,6 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Copyright Text
-		///</summary>
-		[ImplementPropertyType("copyrightText")]
-		public string CopyrightText
-		{
-			get { return this.GetPropertyValue<string>("copyrightText"); }
-		}
-
-		///<summary>
 		/// Default Key Words
 		///</summary>
 		[ImplementPropertyType("defaultKeyWords")]
@@ -428,39 +437,12 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Footer ABN Number
-		///</summary>
-		[ImplementPropertyType("footerABNNumber")]
-		public string FooterAbnnumber
-		{
-			get { return this.GetPropertyValue<string>("footerABNNumber"); }
-		}
-
-		///<summary>
-		/// Footer Links
-		///</summary>
-		[ImplementPropertyType("footerLinks")]
-		public string FooterLinks
-		{
-			get { return this.GetPropertyValue<string>("footerLinks"); }
-		}
-
-		///<summary>
 		/// Main Header Logo: Logo image used on the header section.
 		///</summary>
 		[ImplementPropertyType("mainHeaderLogo")]
 		public string MainHeaderLogo
 		{
 			get { return this.GetPropertyValue<string>("mainHeaderLogo"); }
-		}
-
-		///<summary>
-		/// Site Address
-		///</summary>
-		[ImplementPropertyType("siteAddress")]
-		public string SiteAddress
-		{
-			get { return this.GetPropertyValue<string>("siteAddress"); }
 		}
 
 		///<summary>
@@ -491,39 +473,21 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Site Opening Times
+		/// Site Phone Number 1
 		///</summary>
-		[ImplementPropertyType("siteOpeningTimes")]
-		public string SiteOpeningTimes
+		[ImplementPropertyType("sitePhoneNumber1")]
+		public string SitePhoneNumber1
 		{
-			get { return this.GetPropertyValue<string>("siteOpeningTimes"); }
+			get { return this.GetPropertyValue<string>("sitePhoneNumber1"); }
 		}
 
 		///<summary>
-		/// Site Phone Number
+		/// Site Phone Number 2
 		///</summary>
-		[ImplementPropertyType("sitePhoneNumber")]
-		public string SitePhoneNumber
+		[ImplementPropertyType("sitePhoneNumber2")]
+		public string SitePhoneNumber2
 		{
-			get { return this.GetPropertyValue<string>("sitePhoneNumber"); }
-		}
-
-		///<summary>
-		/// Site Phone Numbers
-		///</summary>
-		[ImplementPropertyType("sitePhoneNumbers")]
-		public string SitePhoneNumbers
-		{
-			get { return this.GetPropertyValue<string>("sitePhoneNumbers"); }
-		}
-
-		///<summary>
-		/// Site Specialties
-		///</summary>
-		[ImplementPropertyType("siteSpecialties")]
-		public string SiteSpecialties
-		{
-			get { return this.GetPropertyValue<string>("siteSpecialties"); }
+			get { return this.GetPropertyValue<string>("sitePhoneNumber2"); }
 		}
 	}
 

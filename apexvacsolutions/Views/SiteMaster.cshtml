@@ -27,9 +27,6 @@
 </head>
 <body>
     <div class="page">
-        <!--========================================================
-                                  HEADER
-        =========================================================-->
         <header>
 
             @Html.Partial("Master/MainNavigation")
@@ -38,9 +35,6 @@
 
         </header>
 
-        <!--========================================================
-                                      CONTENT
-            =========================================================-->
         <main>
 
             @RenderBody()
@@ -48,10 +42,6 @@
             @Html.Partial("Home/TopSection")
 
         </main>
-
-        <!--========================================================
-        FOOTER
-        =========================================================-->
 
         @Html.Partial("Master/SiteFooter")
 
@@ -63,8 +53,6 @@
     <script src="/Scripts/bootstrap.js"></script>
 
     <script src="/Scripts/tm-scripts.js"></script>
-
-    <!-- </script> -->
 
 </body>
 </html>

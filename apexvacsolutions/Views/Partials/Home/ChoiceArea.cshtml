@@ -1,6 +1,5 @@
 ﻿@inherits UmbracoTemplatePage
 @{
-
     var siteSetting = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "GlobalSettings");
     if (siteSetting != null && siteSetting.Id > 0 && siteSetting.Descendants("choiceItem").Any())
     {
@@ -12,7 +11,7 @@
 
         var choicesParents = siteSetting.Descendants("choicesContainer").ToList();
 
-        <section class="well well5">
+        <section class="well well3">
             <div class="container">
                 @if (choicesParents.Any())
                 {
@@ -73,90 +72,4 @@
             </div>
         </section>
     }
-
 }
-
-@*<section class="well well5">
-        <div class="container">
-            <h3 class="text-center">
-                Why Choose Us?
-            </h3>
-
-            <p class="text-center">
-                We have been working in this industry for a long while and
-                you intrests are at the heart of our work.
-            </p>
-
-            <div class="row">
-
-                <ul class="icon-list wow fadeInLeft" data-wow-duration="2s">
-                    <li class="col-md-4 col-sm-6 col-xs-12">
-                        <h6>
-                            <a href="#">
-                                Perfect Experience
-                            </a>
-                        </h6>
-                        <p>
-                            Over 10 years of experience and the latest technology in the industry.
-                        </p>
-                    </li>
-
-                    <li class="col-md-4 col-sm-6 col-xs-12">
-                        <h6>
-                            <a href="#">
-                                Very Competitive Rates
-                            </a>
-                        </h6>
-                        <p>
-                            We charge the best prices in the market to suite your bussiness.
-                        </p>
-                    </li>
-
-                    <li class="col-md-4 col-sm-6 col-xs-12">
-                        <h6>
-                            <a href="#">
-                                Satisfaction Guatantee
-                            </a>
-                        </h6>
-                        <p>
-                            All our work is guranteed for a minimun of 12 months
-                        </p>
-                    </li>
-
-                    <li class="col-md-4 col-sm-6 col-xs-12">
-                        <h6>
-                            <a href="#">
-                                Honest and Dependable
-                            </a>
-                        </h6>
-                        <p>
-                            We will give you our honest option on the job.
-                        </p>
-                    </li>
-
-                    <li class="col-md-4 col-sm-6 col-xs-12">
-                        <h6>
-                            <a href="#">
-                                Safety & Reliability
-                            </a>
-                        </h6>
-                        <p>
-                            All our work is only done after all the necesary safety checks are done.
-                        </p>
-                    </li>
-
-                    <li class="col-md-4 col-sm-6 col-xs-12">
-                        <h6>
-                            <a href="#">
-                                Superior Quality
-                            </a>
-                        </h6>
-                        <p>
-                            With quality products and equipement you are guatanteed to get the best.
-                        </p>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-    </section>*@

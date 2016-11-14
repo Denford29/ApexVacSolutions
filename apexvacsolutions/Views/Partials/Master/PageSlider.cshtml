@@ -1,6 +1,5 @@
 ﻿@inherits UmbracoTemplatePage
 @{
-
     var siteSetting = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "GlobalSettings");
     if (siteSetting != null && siteSetting.Id > 0 && siteSetting.Descendants("SliderItem").Any())
     {

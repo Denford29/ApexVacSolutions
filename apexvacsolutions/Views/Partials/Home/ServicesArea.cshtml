@@ -1,139 +1,84 @@
-﻿@inherits UmbracoTemplatePage
+﻿@using Archetype.Models
+@inherits UmbracoTemplatePage
 @{
-    <section class="well well2 parallax text-center" data-url="images/parallax1.jpg" data-mobile="true" data-speed="0.6">
-        <div class="container">
-            <h2 class="fw-l">
-                Striving to excellence<br />
-                in service we provide
-            </h2>
+    var homePage = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "HomePage");
+    if (homePage != null && homePage.Id > 0 && homePage.Descendants("servicesLanding").Any())
+    {
+        var servicePage = homePage.Descendants("servicesLanding").FirstOrDefault();
+        if (servicePage != null && servicePage.Id > 0)
+        {
+            // get the default heading and replace it with the property value
+            var serviceTitle = servicePage.Name;
+            if (servicePage.HasProperty("pageHeading") && servicePage.HasValue("pageHeading"))
+            {
+                serviceTitle = servicePage.GetPropertyValue("pageHeading").ToString();
+            }
+            // get the default image and replace it with the property value
+            var serviceImageUrl = "/images/Services.jpg";
+            if (servicePage.HasProperty("headingImage") && servicePage.HasValue("headingImage"))
+            {
+                var mediaItem = Umbraco.TypedMedia(servicePage.GetPropertyValue("headingImage").ToString());
+                if (mediaItem != null && mediaItem.Id > 0)
+                {
+                    serviceImageUrl = !string.IsNullOrEmpty(mediaItem.GetCropUrl("Slider")) ? mediaItem.GetCropUrl("Slider") : mediaItem.GetCropUrl(1500, 600);
+                }
+            }
 
-            <p class="white ins1 offs1">
-                We aim to provide the best service to suite your needs and meet the industry requirements and specifications.
-            </p>
-            
-            <a class="btn btn-primary" href="#">Learn More</a>
-        </div>
-    </section>
-
-            <section class="well well5 bg1">
+            <section class="well well1 parallax text-center" data-url="@serviceImageUrl" data-mobile="true" data-speed="0.6">
                 <div class="container">
-                    <h3 class="text-center">
-                        Our Services
-                    </h3>
-                    
-                    <div class="row">
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Excavating
-                        </div>
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Trenching
-                        </div>
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Pot holing
-                        </div>
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Material removal
-                        </div>
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Pier Holes
-                        </div>
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Post holes
-                        </div>
-                        <hr class="col-sm-12" />
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Foundation excavation
-                        </div>
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Site Preperation
-                        </div>
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Expose damaged services
-                        </div>
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Underground Communication Service Location
-                        </div>
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Exposed aggregate concrete
-                        </div>
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            High pressure wash off
-                        </div>
-                        <hr class="col-sm-12" />
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Waste containment
-                        </div>
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Vacuum fence post holes
-                        </div>
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Sign Post holes
-                        </div>
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Pit Construction
-                        </div>
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Soak well cleaning
-                        </div>
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Wood chip removal
-                        </div>
-                        <hr class="col-sm-12" />
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Spa excavation
-                        </div>
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Pool excavation
-                        </div>
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Dry Vacuuming
-                        </div>
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            High pressure water blasting
-                        </div>
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Electrical service location
-                        </div>
-                        <div class="col-sm-2 col-xs-6 serviceItem">
-                            <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                            Sceptic waste removal
-                        </div>
-                        <hr class="col-sm-12"/>
-                    </div>
+                    <h2 class="fw-l">
+                        @serviceTitle
+                    </h2>
+
+                    @if (servicePage.HasProperty("bodyText") && servicePage.HasValue("bodyText"))
+                    {
+                        @Html.Raw(servicePage.GetPropertyValue("bodyText"))
+                    }
+
+                    <a class="btn btn-primary" href="@servicePage.Url" title="@servicePage.Name">
+                        Learn More
+                    </a>
                 </div>
             </section>
+
+            if (servicePage.GetPropertyValue<ArchetypeModel>("servicesItems") != null)
+            {
+                var servicesSectionArchtype = servicePage.GetPropertyValue<ArchetypeModel>("servicesItems");
+                if (servicesSectionArchtype.Fieldsets.Any())
+                {
+                    var firstSection = servicesSectionArchtype.First();
+                    if (!string.IsNullOrEmpty(firstSection.GetValue("itemText")))
+                    {
+                        <section class="well well3 bg1">
+                            <div class="container">
+                                <h3 class="text-center">
+                                    Our Services
+                                </h3>
+
+                                <div class="row">
+                                    @foreach (var fieldset in servicesSectionArchtype)
+                                        {
+                                            var serviceItemText = fieldset.GetValue("itemText");
+                                            var serviceIcon = fieldset.GetValue("itemIcon");
+                                            if (string.IsNullOrWhiteSpace(serviceIcon))
+                                            {
+                                                serviceIcon = "fa-check-square-o";
+                                            }
+                                            <div class="col-sm-2 col-xs-6 serviceItem">
+                                                <span class="icon @serviceIcon fa-2x fa-fw"></span>
+                                                @serviceItemText
+                                            </div>
+                                        }
+                                </div>
+                            </div>
+                        </section>
+                    }
+                }
+            }
+
+        }
+
+    }
 }
 
 @*<div class="col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay=".7s">
@@ -194,4 +139,125 @@
                 </a>
             </div>
         </div>
-    </div>*@
+    </div>
+
+        <section class="well well5 bg1">
+        <div class="container">
+            <h3 class="text-center">
+                Our Services
+            </h3>
+
+            <div class="row">
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Excavating
+                </div>
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Trenching
+                </div>
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Pot holing
+                </div>
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Material removal
+                </div>
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Pier Holes
+                </div>
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Post holes
+                </div>
+                <hr class="col-sm-12" />
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Foundation excavation
+                </div>
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Site Preperation
+                </div>
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Expose damaged services
+                </div>
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Underground Communication Service Location
+                </div>
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Exposed aggregate concrete
+                </div>
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    High pressure wash off
+                </div>
+                <hr class="col-sm-12" />
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Waste containment
+                </div>
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Vacuum fence post holes
+                </div>
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Sign Post holes
+                </div>
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Pit Construction
+                </div>
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Soak well cleaning
+                </div>
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Wood chip removal
+                </div>
+                <hr class="col-sm-12" />
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Spa excavation
+                </div>
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Pool excavation
+                </div>
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Dry Vacuuming
+                </div>
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    High pressure water blasting
+                </div>
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Electrical service location
+                </div>
+                <div class="col-sm-2 col-xs-6 serviceItem">
+                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
+                    Sceptic waste removal
+                </div>
+                <hr class="col-sm-12" />
+            </div>
+        </div>
+    </section>
+*@

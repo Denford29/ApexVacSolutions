@@ -1,0 +1,75 @@
+﻿@model apexvacsolutions.Models.ContactModel
+@{
+    <div class="col-md-8">
+
+        @if (TempData.ContainsKey("contactSuccess"))
+        {
+            var successMessage = (string)TempData["contactSuccess"];
+            <div role="alert" class="alert alert-success alert-dismissible fade in">
+                <button aria-label="Close" data-dismiss="alert" class="close" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <p>@Html.Raw(successMessage)</p>
+            </div>
+        }
+        else
+        {
+            using (Html.BeginUmbracoForm("ContactSubmit", "ContactSurface", FormMethod.Post, new { role = "form", id = "contactForm", name = "sentMessage" }))
+            {
+                if (TempData.ContainsKey("contactError"))
+                {
+                    var errorMessage = (string)TempData["contactError"];
+                    <div role="alert" class="alert alert-danger alert-dismissible fade in">
+                        <button aria-label="Close" data-dismiss="alert" class="close" type="button">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <p>@Html.Raw(errorMessage)</p>
+                    </div>
+                }
+
+                @Html.AntiForgeryToken()
+            }
+        }
+
+        <form class="mailform form-inline" method="post" action="" data-type="contact">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group form-group-lg">
+                        @*<input class="form-control" type="text" name="email" placeholder="Your Full Name" />*@
+                            @Html.TextBoxFor(model => model.FullName, new { @class = "form-control", required = "", placeholder = "Your Full Name" })
+                            @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "help-block text-danger" })
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group form-group-lg">
+                        @*<input class="form-control" type="text" name="email" placeholder="Your Phone Number" />*@
+                        @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control", required = "", placeholder = "Your Phone Number" })
+                        @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "help-block text-danger" })
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group form-group-lg">
+                        @*<input class="form-control" type="text" name="email" placeholder="Your Email Address" />*@
+                        @Html.TextBoxFor(model => model.EmailAddress, new { @class = "form-control", required = "", placeholder = "Your Email Address" })
+                        @Html.ValidationMessageFor(model => model.EmailAddress, "", new { @class = "help-block text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group form-group-lg">
+                        @*<input class="form-control" type="text" name="email" placeholder="Your Message" />*@
+                        @Html.TextBoxFor(model => model.Message, new { @class = "form-control", required = "", placeholder = "Your Message" })
+                        @Html.ValidationMessageFor(model => model.Message, "", new { @class = "help-block text-danger" })
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group mfControls">
+                        <button class="btn" type="submit">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+}

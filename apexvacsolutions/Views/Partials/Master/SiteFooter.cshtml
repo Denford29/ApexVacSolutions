@@ -1,13 +1,79 @@
-﻿@inherits UmbracoTemplatePage
+﻿@using apexvacsolutions.Models
+@inherits UmbracoTemplatePage
 @{
+    var siteSetting = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "GlobalSettings");
+    var contactEmail = "contact@apexvacsolutions.com.au";
+    var contactMobile1 = "0458 503 751";
+    var contactMobile2 = "0429 829 787";
+    if (siteSetting != null && siteSetting.Id > 0 && siteSetting.Descendants("SiteDetails").Any())
+    {
+        var siteDetailsPage = siteSetting.Descendants("SiteDetails").FirstOrDefault();
+        if (siteDetailsPage != null && siteDetailsPage.Id > 0)
+        {
+            if (siteDetailsPage.HasProperty("siteEmailAddress") && siteDetailsPage.HasValue("siteEmailAddress"))
+            {
+                contactEmail = siteDetailsPage.GetPropertyValue("siteEmailAddress").ToString();
+            }
+            if (siteDetailsPage.HasProperty("sitePhoneNumber1") && siteDetailsPage.HasValue("sitePhoneNumber1"))
+            {
+                contactMobile1 = siteDetailsPage.GetPropertyValue("sitePhoneNumber1").ToString();
+            }
+            if (siteDetailsPage.HasProperty("sitePhoneNumber2") && siteDetailsPage.HasValue("sitePhoneNumber2"))
+            {
+                contactMobile2 = siteDetailsPage.GetPropertyValue("sitePhoneNumber2").ToString();
+            }
+        }
+    }
+
+    var contactModel = new ContactModel();
+
+    <section class="well well3 bg-primary">
+        <div class="container">
+            <div class="mailform-sub">
+                <div class="row">
+                    <div class="col-md-4">
+                        <p>
+                            Get in touch with us...
+                        </p>
+                        <ul class="link-list">
+                            <li>
+                                <a href="#">
+                                    <span class="icon fa-envelope"></span>
+                                    @contactEmail
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon fa-phone"></span>
+                                    @contactMobile1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon fa-phone"></span>
+                                    @contactMobile2
+                                </a>
+                            </li>
+                            <li>
+                        </ul>
+                    </div>
+                    
+                    @Html.Partial("Master/ContactForm", contactModel)
+
+                </div>
+
+            </div>
+        </div>
+    </section>
     <footer>
         <section class="well_foot-2 bg-secondary">
             <div class="container">
                 <div class="rights">
                     <h1>
                         ApexVac<span>Solutions</span>
-                    </h1> &#169; <span id="copyright-year">2016</span>&nbsp;
-                    <a href="/">Privacy Policy</a>
+                    </h1>
+                    &#169; <span id="copyright-year">2016</span>&nbsp;
+                    <a href="http://rdmonline.co.uk/" class="pull-right">Crafted by RDM Online</a>
                 </div>
             </div>
         </section>

@@ -1,0 +1,122 @@
+﻿@using Archetype.Models
+@inherits UmbracoTemplatePage
+@{
+
+    var siteSetting = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "GlobalSettings");
+    var homepage = Model.Content.AncestorOrSelf(1);
+
+    var level2ParentNode = homepage;
+    if (Model.Content.Level != 1)
+    {
+        level2ParentNode = CurrentPage.level == 2 ? Model.Content : Model.Content.AncestorOrSelf(2);
+    }
+
+    <div class="col-xs-12 col-sm-12  col-md-5  col-lg-4 text-left center991">
+        @if (level2ParentNode.Id > 0)
+        {
+            if (level2ParentNode.Children.Any(x => x.IsVisible()))
+            {
+                var childPages = level2ParentNode.Children.Where(level3Page => level3Page.IsVisible() && !level3Page.GetPropertyValue<bool>("hideFromMenu")).ToList();
+                <hr>
+                <h4 class="intro-text text-center">
+                    In
+                    <a href="@level2ParentNode.Url" title="@level2ParentNode.Name page">
+                        @level2ParentNode.Name
+                    </a>
+                    section...
+                </h4>
+                <hr>
+
+                <ul class="nav nav-pills nav-stacked">
+                    @foreach (var level3Node in childPages)
+                    {
+                        if (level3Node.Id == CurrentPage.Id || Model.Content.AncestorOrSelf(3).Id == level3Node.Id)
+                        {
+                    <li class="active">
+                        <a href="@level3Node.Url" title="@level3Node.Name page">@level3Node.Name</a>
+                    </li>
+                        }
+                        else
+                        {
+                    <li>
+                        <a href="@level3Node.Url" title="@level3Node.Name page">@level3Node.Name</a>
+                    </li>
+                        }
+                    }
+                </ul>
+            }
+            else
+            {
+                <hr>
+                <h4 class="intro-text text-center">
+                    Also on the website...
+                </h4>
+                <hr>
+
+                <ul class="nav nav-pills nav-stacked">
+                    @foreach (var level2Page in homepage.Children)
+                    {
+                        var hideFromSideMenu = level2Page.GetPropertyValue<bool>("hideFromMenu");
+                        if (level2Page.Id != CurrentPage.Id && !hideFromSideMenu)
+                        {
+                            <li>
+                                <a href="@level2Page.Url" title="@level2Page.Name page">@level2Page.Name</a>
+                            </li>
+                        }
+                    }
+                </ul>
+            }
+        }
+
+        @if (homepage != null && homepage.Id > 0 && homepage.Descendants("servicesLanding").Any())
+        {
+            var servicePage = homepage.Descendants("servicesLanding").FirstOrDefault();
+            if (servicePage != null && servicePage.Id > 0)
+            {
+                if (servicePage.GetPropertyValue<ArchetypeModel>("servicesItems") != null)
+                {
+                    var servicesSectionArchtype = servicePage.GetPropertyValue<ArchetypeModel>("servicesItems");
+                    if (servicesSectionArchtype.Fieldsets.Any())
+                    {
+                        var firstSection = servicesSectionArchtype.First();
+                        if (!string.IsNullOrEmpty(firstSection.GetValue("itemText")))
+                        {
+                            var serviceTitle = servicePage.Name;
+                            if (servicePage.HasProperty("linkTittle") && servicePage.HasValue("linkTittle"))
+                            {
+                                serviceTitle = servicePage.GetPropertyValue("linkTittle").ToString();
+                            }
+                            <hr>
+                            <h4 class="text-center">
+                                @serviceTitle
+                            </h4>
+                            <hr>
+
+                            var r = new Random();
+                            var listingServices = servicesSectionArchtype.OrderBy(x => r.Next()).Take(5).ToList();
+
+                            <ul class="nav nav-pills nav-stacked">
+                                @foreach (var fieldset in listingServices)
+                                {
+                                    var serviceItemText = fieldset.GetValue("itemText");
+                                    var serviceIcon = fieldset.GetValue("itemIcon");
+                                    if (string.IsNullOrWhiteSpace(serviceIcon))
+                                    {
+                                        serviceIcon = "fa-check-square-o";
+                                    }
+                                    <li>
+                                        <span class="fontAwesome icon @serviceIcon fa-2x fa-fw"></span>
+                                        <span class="iconText">
+                                            @serviceItemText
+                                        </span>
+                                    </li>
+                                }
+                            </ul>
+                        }
+                    }
+                }
+            }
+        }
+    </div>
+}
+

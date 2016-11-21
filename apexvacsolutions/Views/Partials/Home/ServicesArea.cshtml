@@ -32,7 +32,7 @@
 
                     @if (servicePage.HasProperty("bodyText") && servicePage.HasValue("bodyText"))
                     {
-                        @Html.Raw(servicePage.GetPropertyValue("bodyText"))
+                    @Html.Raw(servicePage.GetPropertyValue("bodyText"))
                     }
 
                     <a class="btn btn-primary" href="@servicePage.Url" title="@servicePage.Name">
@@ -57,207 +57,26 @@
 
                                 <div class="row">
                                     @foreach (var fieldset in servicesSectionArchtype)
+                                    {
+                                        var serviceItemText = fieldset.GetValue("itemText");
+                                        var serviceIcon = fieldset.GetValue("itemIcon");
+                                        if (string.IsNullOrWhiteSpace(serviceIcon))
                                         {
-                                            var serviceItemText = fieldset.GetValue("itemText");
-                                            var serviceIcon = fieldset.GetValue("itemIcon");
-                                            if (string.IsNullOrWhiteSpace(serviceIcon))
-                                            {
-                                                serviceIcon = "fa-check-square-o";
-                                            }
-                                            <div class="col-sm-2 col-xs-6 serviceItem">
-                                                <span class="icon @serviceIcon fa-2x fa-fw"></span>
-                                                @serviceItemText
-                                            </div>
+                                            serviceIcon = "fa-check-square-o";
                                         }
+                                        <div class="col-sm-2 col-xs-6 serviceItem">
+                                            <span class="fontAwesome icon @serviceIcon fa-2x fa-fw"></span>
+                                            <span class="iconText">
+                                                @serviceItemText
+                                            </span>
+                                        </div>
+                                    }
                                 </div>
                             </div>
                         </section>
                     }
                 }
             }
-
         }
-
     }
 }
-
-@*<div class="col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay=".7s">
-        <div class="thumbnail thumbnail4">
-            <img src="/Images/hydro-excavation-1.jpg" alt="">
-
-            <div class="caption">
-                <h6>
-                    Trenching
-                </h6>
-                <p>
-                    Trenching uses pressurised water with simultaneous vacuum to cut a trench of various dimensions in the ground.
-                </p>
-                <a href="#" class="btn-link">
-                    <span class="fst" data-txt="Read More"></span>
-                    <span class="snd" data-txt="Read More"></span>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay=".5s">
-        <div class="thumbnail thumbnail4">
-            <img src="/Images/hydro-excavation-3.jpg" alt="">
-
-            <div class="caption">
-                <h6>
-                    Pot Holing
-                </h6>
-
-                <p>
-                    uses hydro excavation (non destructive digging) to locate known and unknown underground utilities
-                    This method of excavation prevents damage to any underground services.
-                </p>
-                <a href="#" class="btn-link">
-                    <span class="fst" data-txt="Read More"></span>
-                    <span class="snd" data-txt="Read More"></span>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay=".3s">
-        <div class="thumbnail thumbnail4">
-            <img src="/Images/hydro-excavation-5.jpg" alt="">
-
-            <div class="caption">
-                <h6>
-                    Debris Removal
-                </h6>
-                <p>
-                    With hydro excavation’s precise, non-destructive characteristics,
-                    it can be used to remove debris and clean out a variety of structures without damaging the surrounding area.
-                </p>
-                <a href="/" class="btn-link">
-                    <span class="fst" data-txt="Read More"></span>
-                    <span class="snd" data-txt="Read More"></span>
-                </a>
-            </div>
-        </div>
-    </div>
-
-        <section class="well well5 bg1">
-        <div class="container">
-            <h3 class="text-center">
-                Our Services
-            </h3>
-
-            <div class="row">
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Excavating
-                </div>
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Trenching
-                </div>
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Pot holing
-                </div>
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Material removal
-                </div>
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Pier Holes
-                </div>
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Post holes
-                </div>
-                <hr class="col-sm-12" />
-            </div>
-
-            <div class="row">
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Foundation excavation
-                </div>
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Site Preperation
-                </div>
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Expose damaged services
-                </div>
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Underground Communication Service Location
-                </div>
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Exposed aggregate concrete
-                </div>
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    High pressure wash off
-                </div>
-                <hr class="col-sm-12" />
-            </div>
-
-            <div class="row">
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Waste containment
-                </div>
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Vacuum fence post holes
-                </div>
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Sign Post holes
-                </div>
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Pit Construction
-                </div>
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Soak well cleaning
-                </div>
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Wood chip removal
-                </div>
-                <hr class="col-sm-12" />
-            </div>
-
-            <div class="row">
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Spa excavation
-                </div>
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Pool excavation
-                </div>
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Dry Vacuuming
-                </div>
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    High pressure water blasting
-                </div>
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Electrical service location
-                </div>
-                <div class="col-sm-2 col-xs-6 serviceItem">
-                    <span class="icon fa-check-square-o fa-2x fa-fw"></span>
-                    Sceptic waste removal
-                </div>
-                <hr class="col-sm-12" />
-            </div>
-        </div>
-    </section>
-*@

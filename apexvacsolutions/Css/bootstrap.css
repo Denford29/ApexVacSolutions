@@ -2714,7 +2714,7 @@ h2,
 h3,
 .h3 {
     font-size: 32px;
-    line-height: 1.875;
+    /*line-height: 1.875;*/
     font-weight: 700;
     letter-spacing: -0.8px;
 }
@@ -2722,7 +2722,7 @@ h3,
 h4,
 .h4 {
     font-size: 28px;
-    line-height: 2.14285714;
+    /*line-height: 2.14285714;*/
     color: #454444;
     text-transform: uppercase;
 }
@@ -2850,13 +2850,13 @@ h3 + * {
 }
 
 .inset-3 {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 @media (min-width: 992px) {
     .inset-3 {
-        margin-top: 27px;
-        padding-left: 40px;
+        margin-top: 20px;
+        padding-left: 20px;
     }
 
         .inset-3 + .inset-3 {
@@ -3489,20 +3489,25 @@ p.big {
     width: 100%;
 }
 
-.icon-list li {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+    .icon-list li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 
-.icon-list li .iconContainer {
-    vertical-align: top;
-}
+        .icon-list li .iconContainer {
+            vertical-align: top;
+        }
 
-.icon-list li .icon {
+.fontAwesome.icon {
     color: #efb814;
 }
 
-    /*.icon-list li {
+.iconText {
+    vertical-align: middle;
+    padding: 0 0 10px 5px;
+}
+
+/*.icon-list li {
         display: block;
         padding-left: 94px;
         position: relative;
@@ -3511,11 +3516,11 @@ p.big {
         margin-right: auto;
     }*/
 
-        .icon-list li h6 {
-            line-height: 1;
-        }
+.icon-list li h6 {
+    line-height: 1;
+}
 
-        /*.icon-list li:before {
+/*.icon-list li:before {
             position: absolute;
             content: '\f0c0';
             font-family: 'FontAwesome';
@@ -3530,11 +3535,11 @@ p.big {
             padding-top: 12px;
         }*/
 
-        /*.icon-list li a:hover {
+/*.icon-list li a:hover {
             color: #efb814;
         }*/
 
-        /*.icon-list li h6 + p {
+/*.icon-list li h6 + p {
             margin-top: 7px;
         }
 
@@ -7675,11 +7680,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
         color: #efb814;
     }
 
-      .navbar-brand a img {
-          margin: 10px 0 0 0;
-      }
+    .navbar-brand a img {
+        margin: 10px 0 0 0;
+    }
 
-    /*.navbar-brand:before,
+/*.navbar-brand:before,
     .navbar-brand:after {
         content: "";
         position: absolute;
@@ -7695,7 +7700,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
         transform: translateY(-50%);
     }*/
 
-    /*.navbar-brand:before {
+/*.navbar-brand:before {
         left: 0;
         border-left: 1px solid rgba(255, 255, 255, 0.5);
     }
@@ -9701,18 +9706,18 @@ a.list-group-item-danger {
 }
 
 .well-14 {
-    padding-bottom: 105px;
+    padding-bottom: 40px;
 }
 
 @media (min-width: 768px) {
     .well-14 {
-        padding-top: 79px;
+        padding-top: 20px;
     }
 }
 
 @media (min-width: 1200px) {
     .well-14 {
-        padding-top: 29px;
+        padding-top: 30px;
     }
 }
 
@@ -11351,45 +11356,59 @@ button.close {
 .p-0 {
     padding: 0 !important;
 }
+
 .p-r-0 {
     padding-right: 0 !important;
 }
+
 .p-l-0 {
     padding-left: 0 !important;
 }
+
 .p-t-0 {
     padding-top: 0 !important;
 }
+
 .p-b-0 {
     padding-bottom: 0 !important;
 }
+
 .p-10 {
     padding: 10px !important;
 }
+
 .p-r-10 {
     padding-right: 10px !important;
 }
+
 .p-l-10 {
     padding-left: 10px !important;
 }
+
 .p-t-10 {
     padding-top: 10px !important;
 }
+
 .p-b-10 {
     padding-bottom: 10px !important;
 }
+
 .p-20 {
     padding: 20px !important;
 }
+
 .p-r-20 {
     padding-right: 20px !important;
 }
+
 .p-l-20 {
     padding-left: 20px !important;
 }
+
 .p-t-20 {
     padding-top: 20px !important;
 }
+
 .p-b-20 {
     padding-bottom: 20px !important;
 }
@@ -11397,46 +11416,59 @@ button.close {
 .m-0 {
     margin: 0 !important;
 }
+
 .m-r-0 {
     margin-right: 0 !important;
 }
+
 .m-l-0 {
     margin-left: 0 !important;
 }
+
 .m-t-0 {
     margin-top: 0 !important;
 }
+
 .m-b-0 {
     margin-bottom: 0 !important;
 }
+
 .m-10 {
     margin: 10px !important;
 }
+
 .m-r-10 {
     margin-right: 10px !important;
 }
+
 .m-l-10 {
     margin-left: 10px !important;
 }
+
 .m-t-10 {
     margin-top: 10px !important;
 }
+
 .m-b-10 {
     margin-bottom: 10px !important;
 }
+
 .m-20 {
     margin: 20px !important;
 }
+
 .m-r-20 {
     margin-right: 20px !important;
 }
+
 .m-l-20 {
     margin-left: 20px !important;
 }
+
 .m-t-20 {
     margin-top: 20px !important;
 }
+
 .m-b-20 {
     margin-bottom: 20px !important;
 }
-

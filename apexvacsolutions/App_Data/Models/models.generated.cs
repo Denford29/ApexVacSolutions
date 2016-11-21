@@ -19,7 +19,7 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "505117b224083e24")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "e6719eab6dc7e0d3")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedContentModels
@@ -240,9 +240,9 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Content List Items
 		///</summary>
 		[ImplementPropertyType("contentListItems")]
-		public string ContentListItems
+		public Archetype.Models.ArchetypeModel ContentListItems
 		{
-			get { return this.GetPropertyValue<string>("contentListItems"); }
+			get { return this.GetPropertyValue<Archetype.Models.ArchetypeModel>("contentListItems"); }
 		}
 	}
 
@@ -269,6 +269,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Contact, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Content List Items
+		///</summary>
+		[ImplementPropertyType("contentListItems")]
+		public Archetype.Models.ArchetypeModel ContentListItems
+		{
+			get { return this.GetPropertyValue<Archetype.Models.ArchetypeModel>("contentListItems"); }
 		}
 
 		///<summary>
@@ -307,6 +316,15 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
+		/// Content List Items
+		///</summary>
+		[ImplementPropertyType("contentListItems")]
+		public Archetype.Models.ArchetypeModel ContentListItems
+		{
+			get { return this.GetPropertyValue<Archetype.Models.ArchetypeModel>("contentListItems"); }
+		}
+
+		///<summary>
 		/// Services Items
 		///</summary>
 		[ImplementPropertyType("servicesItems")]
@@ -339,6 +357,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ServicePage, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Content List Items
+		///</summary>
+		[ImplementPropertyType("contentListItems")]
+		public Archetype.Models.ArchetypeModel ContentListItems
+		{
+			get { return this.GetPropertyValue<Archetype.Models.ArchetypeModel>("contentListItems"); }
 		}
 	}
 

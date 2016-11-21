@@ -23,13 +23,20 @@
                                     footerIcon = "fa-info";
                                 }
                                 <div class="col-md-3 col-sm-6 col-xs-6 wow fadeInLeft text-center" data-wow-delay=".9s">
-                                    <span class="icon @footerIcon fa-5x fa-fw"></span>
-                                    <h5 class="ins_r">
-                                        @footerItemHeading
-                                    </h5>
-                                    <p class="txt-light">
-                                        @footerItemText
-                                    </p>
+                                    <span class="fontAwesome icon @footerIcon fa-5x fa-fw"></span>
+                                    @if (!string.IsNullOrWhiteSpace(footerItemHeading))
+                                    {
+                                        <h5 class="ins_r">
+                                            @footerItemHeading
+                                        </h5>
+                                    }
+
+                                    @if (!string.IsNullOrWhiteSpace(footerItemText))
+                                    {
+                                        <p class="txt-light">
+                                            @footerItemText
+                                        </p>
+                                    }
                                 </div>
                             }
                         </div>

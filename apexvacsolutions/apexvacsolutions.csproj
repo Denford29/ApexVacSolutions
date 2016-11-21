@@ -55,10 +55,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="apexvacsolutions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\apexvacsolutions.dll</HintPath>
-    </Reference>
     <Reference Include="Archetype, Version=1.13.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Archetype.dll</HintPath>
@@ -501,8 +497,10 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\material-design.svg" />
+    <Content Include="Images\Apex-Logo-New.png" />
     <Content Include="Images\Apex-Logo.png" />
     <Content Include="Images\ApexVacSolutions-Coming-Soon.png" />
+    <Content Include="Images\ApexVacSolutions-Template-New.png" />
     <Content Include="Images\ApexVacSolutions-Template.png" />
     <Content Include="Images\Building-Innovation.png" />
     <Content Include="Images\camera-loader.gif" />
@@ -519,6 +517,9 @@
     <Content Include="Images\hydro-excavation-5.jpg" />
     <Content Include="Images\Inspection-Testing.png" />
     <Content Include="Images\New-Technologies.png" />
+    <Content Include="Images\page-1_img16.jpg" />
+    <Content Include="Images\page-1_img17.png" />
+    <Content Include="Images\page-1_img18.png" />
     <Content Include="Images\parallax1.jpg" />
     <Content Include="Images\project-management.png" />
     <Content Include="Images\Services.jpg" />
@@ -783,6 +784,8 @@
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="Views\Partials\Master\ContactForm.cshtml" />
+    <Content Include="Views\Partials\Master\ContentArea.cshtml" />
+    <Content Include="Views\Partials\Master\SideNavigation.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

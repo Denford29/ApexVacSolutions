@@ -1,0 +1,63 @@
+﻿@using Archetype.Models
+@inherits UmbracoTemplatePage
+@{
+    var contentHeading = Model.Content.Name;
+    if (Model.Content.HasProperty("pageHeading") && Model.Content.HasValue("pageHeading"))
+    {
+        contentHeading = Model.Content.GetPropertyValue<string>("pageHeading");
+    }
+    <div class="col-xs-12 col-sm-12  col-md-7  col-lg-8 text-left center991">
+        <h3 class="text-lh">
+            @contentHeading
+        </h3>
+        @if (Model.Content.HasProperty("bodyText") && Model.Content.HasValue("bodyText"))
+        {
+            <div class="offset-4">
+                @Html.Raw(Model.Content.GetPropertyValue<string>("bodyText"))
+            </div>
+        }
+
+        @if (Model.Content.GetPropertyValue<ArchetypeModel>("contentListItems") != null)
+        {
+            var contentListArchtype = Model.Content.GetPropertyValue<ArchetypeModel>("contentListItems");
+            if (contentListArchtype.Fieldsets.Any())
+            {
+                var firstSection = contentListArchtype.First();
+                if (!string.IsNullOrEmpty(firstSection.GetValue("itemHeading")))
+                {
+                    foreach (var fieldset in contentListArchtype)
+                    {
+                        var footerItemHeading = fieldset.GetValue("itemHeading");
+                        var footerItemText = fieldset.GetValue("itemText");
+                        var footerIcon = fieldset.GetValue("itemIcon");
+                        if (string.IsNullOrWhiteSpace(footerIcon))
+                        {
+                            footerIcon = "fa-info";
+                        }
+
+                        <div class="text-left left991 media inset-3 row">
+                            <div class="col-md-2">
+                                <span class="fontAwesome icon @footerIcon fa-5x fa-fw"></span>
+                            </div>
+                            <div class="col-md-10">
+                                @if (!string.IsNullOrWhiteSpace(footerItemHeading))
+                                {
+                                    <h6 class="ins_r">
+                                        @footerItemHeading
+                                    </h6>
+                                }
+
+                                @if (!string.IsNullOrWhiteSpace(footerItemText))
+                                {
+                                    <p>
+                                        @footerItemText
+                                    </p>
+                                }
+                            </div>
+                        </div>
+                    }
+                }
+            }
+        }
+        </div>
+}

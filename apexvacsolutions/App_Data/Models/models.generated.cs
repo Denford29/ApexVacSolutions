@@ -19,7 +19,7 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "e6719eab6dc7e0d3")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "eee2f48403eb6906")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedContentModels
@@ -284,9 +284,18 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Map Location: Set the location to be used on the contact page.
 		///</summary>
 		[ImplementPropertyType("mapLocation")]
-		public string MapLocation
+		public AngularGoogleMaps.Model MapLocation
 		{
-			get { return this.GetPropertyValue<string>("mapLocation"); }
+			get { return this.GetPropertyValue<AngularGoogleMaps.Model>("mapLocation"); }
+		}
+
+		///<summary>
+		/// Site Address
+		///</summary>
+		[ImplementPropertyType("siteAddress")]
+		public IEnumerable<string> SiteAddress
+		{
+			get { return this.GetPropertyValue<IEnumerable<string>>("siteAddress"); }
 		}
 	}
 

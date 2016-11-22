@@ -7,7 +7,20 @@
         contentHeading = Model.Content.GetPropertyValue<string>("pageHeading");
     }
     <div class="col-xs-12 col-sm-12  col-md-7  col-lg-8 text-left center991">
-        <h3 class="text-lh">
+
+        @if (Model.Content.HasProperty("headingImage") && Model.Content.HasValue("headingImage"))
+        {
+            var mediaItem = Umbraco.TypedMedia(Model.Content.GetPropertyValue("headingImage").ToString());
+            if (mediaItem != null && mediaItem.Id > 0)
+            {
+                var imageUrl = !string.IsNullOrEmpty(mediaItem.GetCropUrl("headerImage")) ? mediaItem.GetCropUrl("headerImage") : mediaItem.GetCropUrl(1000, 400);
+                <div class="text-center headerImage">
+                    <img class="img-responsive img-full center-block img-thumbnail" src="@imageUrl" alt="@Model.Content.Name">
+                </div>
+            }
+        }
+
+        <h3 class="text-lh m-t-20">
             @contentHeading
         </h3>
         @if (Model.Content.HasProperty("bodyText") && Model.Content.HasValue("bodyText"))
@@ -37,19 +50,19 @@
 
                         <div class="text-left left991 media inset-3 row">
                             <div class="col-md-2">
-                                <span class="fontAwesome icon @footerIcon fa-5x fa-fw"></span>
+                                <span class="fontAwesome icon @footerIcon fa-4x fa-fw pull-right"></span>
                             </div>
                             <div class="col-md-10">
                                 @if (!string.IsNullOrWhiteSpace(footerItemHeading))
                                 {
-                                    <h6 class="ins_r">
+                                    <h6 class="m-t-20">
                                         @footerItemHeading
                                     </h6>
                                 }
 
                                 @if (!string.IsNullOrWhiteSpace(footerItemText))
                                 {
-                                    <p>
+                                    <p class="m-t-10">
                                         @footerItemText
                                     </p>
                                 }
@@ -59,5 +72,18 @@
                 }
             }
         }
-        </div>
+
+        @if (Model.Content.ContentType.Alias == "contact" && Model.Content.HasProperty("mapLocation") && Model.Content.HasValue("mapLocation"))
+        {
+            var map = Model.Content.GetPropertyValue<AngularGoogleMaps.Model>("mapLocation");
+            if (map.Latitude != decimal.Zero && map.Longitude != decimal.Zero)
+            {
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="mapContainer" style="height: 400px; width: 100%;"></div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
 }

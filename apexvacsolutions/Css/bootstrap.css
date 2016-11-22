@@ -1419,11 +1419,11 @@ th {
 }
 
     .head-2 .isStuck .navbar-nav > li > a:focus {
-        color: #efb814 !important;
+        color: #3DAD48 !important;
     }
 
     .head-2 .isStuck .navbar-nav > li > a:hover {
-        color: #efb814 !important;
+        color: #3DAD48 !important;
         background-color: transparent;
     }
 
@@ -1599,7 +1599,7 @@ th {
         }
 
         .resp-tabs-list li:hover {
-            border: 1px solid #efb814;
+            border: 1px solid #3DAD48;
         }
 
 @media (max-width: 991px) {
@@ -1639,7 +1639,7 @@ th {
         text-transform: uppercase;
         font-size: 17px;
         padding: 11px 16px;
-        background: #efb814;
+        background: #3DAD48;
         border: 1px solid transparent;
         -moz-transition: 0.3s;
         -webkit-transition: 0.3s;
@@ -1650,18 +1650,18 @@ th {
 
         .resp-accordion:hover {
             background: transparent;
-            color: #efb814;
-            border: 1px solid #efb814;
+            color: #3DAD48;
+            border: 1px solid #3DAD48;
         }
 
     .resp-tabs-container .resp-tab-active {
         background: transparent;
-        color: #efb814;
+        color: #3DAD48;
     }
 
         .resp-tabs-container .resp-tab-active:hover {
             color: #ffffff;
-            background: #efb814;
+            background: #3DAD48;
         }
 
     .resp-tabs-list {
@@ -1669,7 +1669,7 @@ th {
     }
 
     .resp-tabs-container .resp-tab-active {
-        border: 1px solid #efb814;
+        border: 1px solid #3DAD48;
     }
 }
 
@@ -1692,7 +1692,7 @@ th {
 }
 
 .resp-tabs-list .resp-tab-active {
-    border-color: #efb814;
+    border-color: #3DAD48;
     position: relative;
 }
 /*==================  RD Parallax    ======================*/
@@ -1794,7 +1794,7 @@ th {
 }
 
 .rd-mobilemenu_ul li.active > a {
-    background: #efb814;
+    background: #3DAD48;
     color: #ffffff;
 }
 
@@ -1809,7 +1809,7 @@ th {
     }
 
     .rd-mobilemenu_ul a:hover {
-        background: #efb814;
+        background: #3DAD48;
         color: #ffffff;
     }
 
@@ -1902,7 +1902,7 @@ th {
         }
 
         .rd-mobilemenu_ul ul ul a:hover {
-            background: #efb814;
+            background: #3DAD48;
             color: #ffffff;
         }
 
@@ -2069,7 +2069,7 @@ th {
     }
 
     div#panel #advanced .navbar-collapse li a:hover {
-        background: #efb814 !important;
+        background: #3DAD48 !important;
         color: #ffffff !important;
     }
 
@@ -2335,7 +2335,7 @@ a {
 
     a:hover {
         text-decoration: none;
-        color: #efb814;
+        color: #3DAD48;
     }
 
     a[href^="tel:"],
@@ -2448,11 +2448,11 @@ header.head-2 {
     }
 
         header.head-2 .navbar-default .navbar-nav > li > a:hover {
-            color: #efb814;
+            color: #3DAD48;
         }
 
     header.head-2 .navbar-default .navbar-nav > li.sfHover > a {
-        color: #efb814;
+        color: #3DAD48;
     }
 
     header.head-2 .navbar-brand:before,
@@ -2572,7 +2572,7 @@ footer {
             }
 
             footer .categ div:hover {
-                background: #efb814;
+                background: #3DAD48;
             }
 
                 footer .categ div:hover a {
@@ -2585,7 +2585,7 @@ footer {
     }
 
         footer .rights h1 span {
-            color: #efb814;
+            color: #3DAD48;
         }
 
     footer .rights a {
@@ -3114,7 +3114,7 @@ mark,
 }
 
 .text-primary {
-    color: #efb814;
+    color: #3DAD48;
 }
 
 .text-success {
@@ -3142,7 +3142,7 @@ mark,
 }
 
 .bg-primary {
-    background: #efb814;
+    background: #00ADEE;
 }
 
 .bg-secondary {
@@ -3195,7 +3195,7 @@ mark,
     }
 
 .bg1-primary {
-    background: #efb814;
+    background: #3DAD48;
 }
 
     .bg1-primary * {
@@ -3248,7 +3248,7 @@ mark,
             }
 
             .bg-image-1 .breadcrumb > li > a {
-                color: #efb814;
+                color: #3DAD48;
             }
 
                 .bg-image-1 .breadcrumb > li > a:hover {
@@ -3459,7 +3459,7 @@ p.big {
         color: #ffffff;
         width: 60px;
         height: 60px;
-        background: #efb814;
+        background: #3DAD48;
         font-size: 24px;
         font-weight: 700;
         top: 0px;
@@ -3499,7 +3499,7 @@ p.big {
         }
 
 .fontAwesome.icon {
-    color: #efb814;
+    color: #3DAD48;
 }
 
 .iconText {
@@ -3528,7 +3528,7 @@ p.big {
             color: #ffffff;
             width: 60px;
             height: 60px;
-            background: #efb814;
+            background: #3DAD48;
             left: 15px;
             top: 0px;
             padding-left: 17px;
@@ -3536,7 +3536,7 @@ p.big {
         }*/
 
 /*.icon-list li a:hover {
-            color: #efb814;
+            color: #3DAD48;
         }*/
 
 /*.icon-list li h6 + p {
@@ -3612,11 +3612,11 @@ p.big {
         }
 
         /*.link-list li a:hover {
-            color: #efb814;
+            color: #3DAD48;
         }
 
             .link-list li a:hover .icon:before {
-                color: #efb814;
+                color: #3DAD48;
             }*/
 
         .link-list li a {
@@ -3644,7 +3644,7 @@ p.big {
 
 .icon-1-primary {
     color: #ffffff;
-    background: #efb814;
+    background: #3DAD48;
 }
 
 .icon-1-xs {
@@ -3711,7 +3711,7 @@ p.big {
             content: '\f138';
             font-family: 'FontAwesome';
             font-size: 15px;
-            color: #efb814;
+            color: #3DAD48;
             left: 0;
             top: 0;
         }
@@ -3721,7 +3721,7 @@ p.big {
         }
 
     .marked-list a a:hover {
-        color: #efb814;
+        color: #3DAD48;
     }
 
 * + .marked-list {
@@ -3746,7 +3746,7 @@ p.big {
 
     .terms-list + * a {
         text-decoration: underline;
-        color: #efb814;
+        color: #3DAD48;
     }
 
         .terms-list + * a:hover {
@@ -3958,7 +3958,7 @@ address {
     }
 
     .addr1 .mail dd {
-        color: #efb814;
+        color: #3DAD48;
     }
 
     .addr1 .mail a:hover {
@@ -4170,7 +4170,7 @@ article .media-left {
     display: block;
     text-align: center;
     font-size: 50px;
-    color: #efb814;
+    color: #3DAD48;
     margin: 5px auto;
 }
 
@@ -6017,9 +6017,9 @@ select[multiple].form-group-lg .form-control {
 }
 
     .btn:hover {
-        color: #efb814;
+        color: #3DAD48;
         background-color: transparent;
-        border-color: #efb814;
+        border-color: #3DAD48;
     }
 
         .btn:hover:active,
@@ -6047,12 +6047,12 @@ select[multiple].form-group-lg .form-control {
         .btn:hover[disabled].active,
         fieldset[disabled] .btn:hover.active {
             background-color: transparent;
-            border-color: #efb814;
+            border-color: #3DAD48;
         }
 
         .btn:hover .badge {
             color: transparent;
-            background-color: #efb814;
+            background-color: #3DAD48;
         }
 
 .btn-bord {
@@ -6146,8 +6146,8 @@ select[multiple].form-group-lg .form-control {
 
     .btn-default:hover {
         color: #ffffff;
-        background-color: #efb814;
-        border-color: #efb814;
+        background-color: #3DAD48;
+        border-color: #3DAD48;
     }
 
         .btn-default:hover:active,
@@ -6174,19 +6174,19 @@ select[multiple].form-group-lg .form-control {
         .btn-default:hover.disabled.active,
         .btn-default:hover[disabled].active,
         fieldset[disabled] .btn-default:hover.active {
-            background-color: #efb814;
-            border-color: #efb814;
+            background-color: #3DAD48;
+            border-color: #3DAD48;
         }
 
         .btn-default:hover .badge {
-            color: #efb814;
+            color: #3DAD48;
             background-color: #ffffff;
         }
 
 .btn-primary {
     color: #ffffff;
-    background-color: #efb814;
-    border-color: #efb814;
+    background-color: #3DAD48;
+    border-color: #3DAD48;
 }
 
     .btn-primary:active,
@@ -6213,19 +6213,19 @@ select[multiple].form-group-lg .form-control {
     .btn-primary.disabled.active,
     .btn-primary[disabled].active,
     fieldset[disabled] .btn-primary.active {
-        background-color: #efb814;
-        border-color: #efb814;
+        background-color: #3DAD48;
+        border-color: #3DAD48;
     }
 
     .btn-primary .badge {
-        color: #efb814;
+        color: #3DAD48;
         background-color: #ffffff;
     }
 
     .btn-primary:focus {
         color: #ffffff;
-        background-color: #efb814;
-        border-color: #efb814;
+        background-color: #3DAD48;
+        border-color: #3DAD48;
     }
 
         .btn-primary:focus:active,
@@ -6252,19 +6252,19 @@ select[multiple].form-group-lg .form-control {
         .btn-primary:focus.disabled.active,
         .btn-primary:focus[disabled].active,
         fieldset[disabled] .btn-primary:focus.active {
-            background-color: #efb814;
-            border-color: #efb814;
+            background-color: #3DAD48;
+            border-color: #3DAD48;
         }
 
         .btn-primary:focus .badge {
-            color: #efb814;
+            color: #3DAD48;
             background-color: #ffffff;
         }
 
     .btn-primary:hover {
-        color: #efb814;
+        color: #3DAD48;
         background-color: transparent;
-        border-color: #efb814;
+        border-color: #3DAD48;
     }
 
         .btn-primary:hover:active,
@@ -6292,18 +6292,18 @@ select[multiple].form-group-lg .form-control {
         .btn-primary:hover[disabled].active,
         fieldset[disabled] .btn-primary:hover.active {
             background-color: transparent;
-            border-color: #efb814;
+            border-color: #3DAD48;
         }
 
         .btn-primary:hover .badge {
             color: transparent;
-            background-color: #efb814;
+            background-color: #3DAD48;
         }
 
 .btn-primary-mod {
-    color: #efb814;
+    color: #3DAD48;
     background-color: transparent;
-    border-color: #efb814;
+    border-color: #3DAD48;
 }
 
     .btn-primary-mod:active,
@@ -6331,18 +6331,18 @@ select[multiple].form-group-lg .form-control {
     .btn-primary-mod[disabled].active,
     fieldset[disabled] .btn-primary-mod.active {
         background-color: transparent;
-        border-color: #efb814;
+        border-color: #3DAD48;
     }
 
     .btn-primary-mod .badge {
         color: transparent;
-        background-color: #efb814;
+        background-color: #3DAD48;
     }
 
     .btn-primary-mod:hover {
         color: #ffffff;
-        background-color: #efb814;
-        border-color: #efb814;
+        background-color: #3DAD48;
+        border-color: #3DAD48;
     }
 
         .btn-primary-mod:hover:active,
@@ -6369,12 +6369,12 @@ select[multiple].form-group-lg .form-control {
         .btn-primary-mod:hover.disabled.active,
         .btn-primary-mod:hover[disabled].active,
         fieldset[disabled] .btn-primary-mod:hover.active {
-            background-color: #efb814;
-            border-color: #efb814;
+            background-color: #3DAD48;
+            border-color: #3DAD48;
         }
 
         .btn-primary-mod:hover .badge {
-            color: #efb814;
+            color: #3DAD48;
             background-color: #ffffff;
         }
 
@@ -6692,7 +6692,7 @@ select[multiple].form-group-lg .form-control {
 
 .btn-link {
     display: inline-block;
-    color: #efb814;
+    color: #3DAD48;
     font-weight: 300;
     text-transform: uppercase;
     border-radius: 0;
@@ -6787,7 +6787,7 @@ select[multiple].form-group-lg .form-control {
         }
 
             .btn-link:hover {
-                color: #efb814;
+                color: #3DAD48;
                 text-decoration: none;
                 background-color: transparent;
             }
@@ -7677,7 +7677,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     }
 
     .navbar-brand span {
-        color: #efb814;
+        color: #3DAD48;
     }
 
     .navbar-brand a img {
@@ -7795,7 +7795,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
         }
 
         .navbar-default .navbar-nav > li > a:hover {
-            color: #efb814;
+            color: #3DAD48;
             background-color: transparent;
         }
 
@@ -7805,7 +7805,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     .navbar-default .navbar-nav > .sfHover > a:hover,
     .navbar-default .navbar-nav > .active > a:focus,
     .navbar-default .navbar-nav > .sfHover > a:focus {
-        color: #efb814;
+        color: #3DAD48;
         background-color: transparent;
     }
 
@@ -7951,7 +7951,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
         .dropdown-menu > li > a:focus {
             text-decoration: none;
             color: #ffffff;
-            background-color: #efb814;
+            background-color: #3DAD48;
         }
 
     .dropdown-menu > .active > a,
@@ -7963,7 +7963,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
         color: #ffffff;
         text-decoration: none;
         outline: 0;
-        background-color: #efb814;
+        background-color: #3DAD48;
     }
 
     .dropdown-menu > .disabled > a,
@@ -8004,7 +8004,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 
     .sf-menu > li > ul li ul.dropdown-menu {
         position: absolute;
-        background: #efb814;
+        background: #3DAD48;
         left: 110%;
         top: 0;
     }
@@ -8019,7 +8019,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 
             .sf-menu > li > ul li ul.dropdown-menu li a:hover {
                 background: #ffffff;
-                color: #efb814;
+                color: #3DAD48;
             }
 
 .dropdown-menu-right {
@@ -8161,12 +8161,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 
     .bg-mod .breadcrumb > li > a:hover {
-        color: #efb814;
+        color: #3DAD48;
     }
 
 .bg-mod .breadcrumb > li.active > a,
 .bg-mod .breadcrumb > li.active span {
-    color: #efb814;
+    color: #3DAD48;
 }
 
 .pagination {
@@ -8210,7 +8210,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
         .pagination > li > span:hover,
         .pagination > li > a:focus,
         .pagination > li > span:focus {
-            color: #efb814;
+            color: #3DAD48;
             background-color: #999999;
             border-color: #dddddd;
         }
@@ -8223,8 +8223,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     .pagination > .active > span:focus {
         z-index: 2;
         color: #ffffff;
-        background-color: #efb814;
-        border-color: #efb814;
+        background-color: #3DAD48;
+        border-color: #3DAD48;
         cursor: default;
     }
 
@@ -8360,7 +8360,7 @@ a.label:focus {
     }
 
 .label-primary {
-    background-color: #efb814;
+    background-color: #3DAD48;
 }
 
     .label-primary[href]:hover,
@@ -8514,7 +8514,7 @@ a.badge:focus {
 
     .jumbotron .head span {
         display: block;
-        color: #efb814;
+        color: #3DAD48;
         font-size: 48px;
         line-height: 52px;
         margin-top: 19px;
@@ -8535,7 +8535,7 @@ a.badge:focus {
     }
 
     .jumbotron .btn-link:hover {
-        color: #efb814;
+        color: #3DAD48;
     }
 
 .jumbotron .head + * {
@@ -8768,7 +8768,7 @@ a.badge:focus {
     line-height: 24px;
     color: #333333;
     text-align: center;
-    background-color: #efb814;
+    background-color: #3DAD48;
     -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
     -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
@@ -9413,26 +9413,26 @@ a.list-group-item-danger {
     }
 
 .panel-primary {
-    border-color: #efb814;
+    border-color: #3DAD48;
 }
 
     .panel-primary > .panel-heading {
         color: #ffffff;
-        background-color: #efb814;
-        border-color: #efb814;
+        background-color: #3DAD48;
+        border-color: #3DAD48;
     }
 
         .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-            border-top-color: #efb814;
+            border-top-color: #3DAD48;
         }
 
         .panel-primary > .panel-heading .badge {
-            color: #efb814;
+            color: #3DAD48;
             background-color: #ffffff;
         }
 
     .panel-primary > .panel-footer + .panel-collapse > .panel-body {
-        border-bottom-color: #efb814;
+        border-bottom-color: #3DAD48;
     }
 
 .panel-success {
@@ -10141,7 +10141,7 @@ button.close {
     height: 100%;
     width: 100%;
     position: relative;
-    background: #efb814;
+    background: #3DAD48;
     left: 0;
     top: 0;
 }
@@ -11350,7 +11350,7 @@ button.close {
 }
 
 .serviceItem .icon {
-    color: #efb814;
+    color: #3DAD48;
 }
 
 .p-0 {

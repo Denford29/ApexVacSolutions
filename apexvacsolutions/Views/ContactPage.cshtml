@@ -11,4 +11,73 @@
 
         </div>
     </section>
+
+    var lat = decimal.Zero;
+    var lng = decimal.Zero;
+    var zoom = 0;
+
+    if (Model.Content.HasProperty("mapLocation") && Model.Content.HasValue("mapLocation"))
+    {
+        var map = Model.Content.GetPropertyValue<AngularGoogleMaps.Model>("mapLocation");
+        lat = map.Latitude;
+        lng = map.Longitude;
+        zoom = map.Zoom;
+    }
+}
+
+@section footerScripts{
+
+    @if (lat != decimal.Zero && lng != decimal.Zero && zoom > 0)
+    {
+        var locationAddress = "";
+        var setAddress = new string[] { };
+
+        if (Model.Content.HasProperty("siteAddress") && Model.Content.HasValue("siteAddress"))
+        {
+            setAddress = Model.Content.GetPropertyValue<string[]>("siteAddress");
+            locationAddress = setAddress.Aggregate(locationAddress, (current, address) => current + (address + " "));
+        }
+
+        var mapAddress = "<p style=\"line-height: 20px;\"><strong>Apex Vac Solutions</strong></p><p>" + locationAddress + "</p>";
+
+        @*<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>*@
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuUgVleV4A2SWH2PSDzShvtq67cF52-P8&callback=initialize" async defer></script>
+
+        <script type="text/javascript">
+            var myLatlng;
+            var map;
+            var marker;
+
+            function initialize() {
+                myLatlng = new google.maps.LatLng(@lat, @lng);
+
+                var mapOptions = {
+                    zoom: @zoom,
+                    center: myLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    scrollwheel: false,
+                    draggable: false
+                };
+                map = new google.maps.Map(document.getElementById('mapContainer'), mapOptions);
+
+                var contentString = '@Html.Raw(mapAddress)';
+
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+
+                marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: 'Marker'
+                });
+
+                google.maps.event.addListener(marker,
+                    'click',
+                    function() {
+                        infowindow.open(map, marker);
+                    });
+            }
+        </script>
+    }
 }

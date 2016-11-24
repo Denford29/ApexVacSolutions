@@ -1,0 +1,90 @@
+﻿@using apexvacsolutions.App_Code
+@using Examine.SearchCriteria
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+    @{
+
+        var resultsTotal = 0;
+        var maxPaginatingItems = 2;
+        var searchQuery = "";
+        if (!String.IsNullOrEmpty(HttpContext.Current.Request.QueryString["q"]))
+        {
+            searchQuery = Request.QueryString["q"].Trim();
+        }
+
+        <h5 class="p-t-10">
+            <strong>You have searched for:</strong>
+            @searchQuery
+        </h5>
+
+        if (!string.IsNullOrEmpty(searchQuery))
+        {
+            var searcher = ExamineManager.Instance.SearchProviderCollection["ExternalSearcher"];
+            var criteria = searcher.CreateSearchCriteria(BooleanOperation.Or)
+                .Field("pageHeading", searchQuery)
+                .Or().Field("nodeName", searchQuery)
+                .Or().Field("bodyText", searchQuery)
+                .Or().Field("browserTitle", searchQuery)
+                .Or().Field("metaDescription", searchQuery)
+                .Compile();
+
+            var searchResults = searcher.Search(criteria);
+            if (!searchResults.Any())
+            {
+                <h5 class="p-t-10">
+                    The search for @searchQuery , could not find any results, please try to search for another word(s).
+                </h5>
+            }
+            else
+            {
+                resultsTotal = searchResults.Count();
+                var pagingItems = paging.GetPages(resultsTotal, maxPaginatingItems);
+                var pagedResults = searchResults.Skip(pagingItems.Skip).Take(pagingItems.Take).ToList();
+
+                <section class="pagingContainer contentBox">
+                    <ul class="searchResults">
+                        @foreach (var result in pagedResults)
+                        {
+                            <li class="searchItem">
+                                <h4>
+                                    <a href="@umbraco.library.NiceUrl(result.Id)" title="@result.Fields["nodeName"]">
+                                        @result.Fields["nodeName"]
+                                    </a>
+                                </h4>
+                                <p class="searchContent">
+                                    @try
+                                    {
+                                        @result.Fields["bodyText"]
+                                    }
+                                    catch
+                                    {
+                                    }
+                                    @try
+                                    {
+                                        @result.Fields["metaDescription"]
+                                    }
+                                    catch
+                                    {
+                                    }
+                                </p>
+                            </li>
+                            <hr/>
+                        }
+                    </ul>
+                    @if (resultsTotal > maxPaginatingItems)
+                    {
+                        @pagingtemplate.RenderPaging(pagingItems, CurrentPage.Id)
+                    }
+                </section>
+            }
+        }
+        else
+        {
+            <div class="row page-header">
+                <p>
+                    The search could not find any results, please try to search for another word(s).
+                </p>
+            </div>
+
+        }
+    }
+    

@@ -85,5 +85,10 @@
                 </div>
             }
         }
+        
+        @if (Model.Content.ContentType.Alias == "searchPage")
+        {
+            @Html.Partial("Search/SearchResults")
+        }
     </div>
 }

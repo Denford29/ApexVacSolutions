@@ -370,6 +370,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\paging.cs" />
     <Compile Include="Controllers\ContactSurfaceController.cs" />
     <Compile Include="Models\ContactModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -786,6 +787,9 @@
     <Content Include="Views\Partials\Master\ContactForm.cshtml" />
     <Content Include="Views\Partials\Master\ContentArea.cshtml" />
     <Content Include="Views\Partials\Master\SideNavigation.cshtml" />
+    <Content Include="Views\Partials\Search\SearchResults.cshtml" />
+    <Content Include="Views\SearchPage.cshtml" />
+    <Content Include="App_Code\pagingtemplate.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

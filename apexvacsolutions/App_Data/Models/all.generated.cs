@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "eee2f48403eb6906")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "d255ecaa4fc4d82f")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -709,6 +709,32 @@ namespace Umbraco.Web.PublishedContentModels
 		public string ItemText
 		{
 			get { return this.GetPropertyValue<string>("itemText"); }
+		}
+	}
+
+	/// <summary>Search Page</summary>
+	[PublishedContentModel("searchPage")]
+	public partial class SearchPage : SiteMaster
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "searchPage";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public SearchPage(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<SearchPage, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
 	}
 

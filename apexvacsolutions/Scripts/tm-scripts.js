@@ -13,7 +13,7 @@ function isIE() {
 
 /* Easing library
  ========================================================*/
-include("/Scripts/jquery.easing.1.3.js");
+//include("/Scripts/jquery.easing.1.3.js");
 
 
 /* Stick up menus
@@ -21,7 +21,7 @@ include("/Scripts/jquery.easing.1.3.js");
 (function ($) {
     var o = $("html");
     if (o.hasClass("desktop")) {
-        include("/Scripts/tmstickup.js");
+        //include("/Scripts/tmstickup.js");
 
         $(document).ready(function () {
             $("#stuck_container").TMStickUp({});
@@ -34,7 +34,7 @@ include("/Scripts/jquery.easing.1.3.js");
 (function ($) {
     var o = $("html");
     if (o.hasClass("desktop")) {
-        include("/Scripts/jquery.ui.totop.js");
+        //include("/Scripts/jquery.ui.totop.js");
 
         $(document).ready(function () {
             $().UItoTop({easingType: "easeOutQuart"});
@@ -44,13 +44,13 @@ include("/Scripts/jquery.easing.1.3.js");
 
 /* EqualHeights
  ========================================================*/
-;
-(function ($) {
-    var o = $("[data-equal-group]");
-    if (o.length > 0) {
-        include("/Scripts/jquery.equalheights.js");
-    }
-})(jQuery);
+
+//(function ($) {
+//    var o = $("[data-equal-group]");
+//    if (o.length > 0) {
+//        include("/Scripts/jquery.equalheights.js");
+//    }
+//})(jQuery);
 
 
 
@@ -65,15 +65,15 @@ include("/Scripts/jquery.easing.1.3.js");
 //})(jQuery);
 
 
-(function ($) {
-    function include(url) {
-	document.write('<script src="/scripts/' + url + '"></script>');
-	return false;
-}
-	include("superfish.js");
-	jQuery(function () {
-});
-})(jQuery);
+//(function ($) {
+//    function include(url) {
+//	document.write('<script src="/scripts/' + url + '"></script>');
+//	return false;
+//}
+//	//include("superfish.js");
+//	jQuery(function () {
+//});
+//})(jQuery);
 
 /* Responsive Tabs
  ========================================================*/
@@ -90,9 +90,9 @@ include("/Scripts/jquery.easing.1.3.js");
 
 /* Navbar
  ========================================================*/
-(function () {
-    include("/Scripts/jquery.rd-navbar.js");
-})(jQuery);
+//(function () {
+//    include("/Scripts/jquery.rd-navbar.js");
+//})(jQuery);
 
 /* JQuery UI Accordion
  ========================================================*/
@@ -115,47 +115,47 @@ include("/Scripts/jquery.easing.1.3.js");
 
 /* Google Map
  ========================================================*/
-(function ($) {
-    var o = document.getElementById("google-map");
-    if (o) {
-        include("//maps.google.com/maps/api/js?sensor=false");
-        include("/Scripts/jquery.rd-google-map.js");
+//(function ($) {
+//    var o = document.getElementById("google-map");
+//    if (o) {
+//        include("//maps.google.com/maps/api/js?sensor=false");
+//        include("/Scripts/jquery.rd-google-map.js");
 
-        $(document).ready(function () {
-            var o = $("#google-map");
-            if (o.length > 0) {
-                o.googleMap({styles:[{
-                    "featureType": "all",
-                    "elementType": "all",
-                    "stylers": [
-                        {
-                            "hue": "#ffbb00"
-                        }
-                    ]
-                },
-                    {
-                        "featureType": "all",
-                        "elementType": "geometry.fill",
-                        "stylers": [
-                            {
-                                "hue": "#ffbb00"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "all",
-                        "elementType": "labels.text.fill",
-                        "stylers": [
-                            {
-                                "hue": "#ffbb00"
-                            }
-                        ]
-                    }]});
-            }
-        });
-    }
-})
-(jQuery);
+//        $(document).ready(function () {
+//            var o = $("#google-map");
+//            if (o.length > 0) {
+//                o.googleMap({styles:[{
+//                    "featureType": "all",
+//                    "elementType": "all",
+//                    "stylers": [
+//                        {
+//                            "hue": "#ffbb00"
+//                        }
+//                    ]
+//                },
+//                    {
+//                        "featureType": "all",
+//                        "elementType": "geometry.fill",
+//                        "stylers": [
+//                            {
+//                                "hue": "#ffbb00"
+//                            }
+//                        ]
+//                    },
+//                    {
+//                        "featureType": "all",
+//                        "elementType": "labels.text.fill",
+//                        "stylers": [
+//                            {
+//                                "hue": "#ffbb00"
+//                            }
+//                        ]
+//                    }]});
+//            }
+//        });
+//    }
+//})
+//(jQuery);
 
 /* Owl Carousel
 ========================================================*/
@@ -377,12 +377,12 @@ include("/Scripts/jquery.easing.1.3.js");
 /* Search.js
  ========================================================*/
 
-(function ($) {
-    var o = $(".search-form");
-    if (o.length > 0) {
-        include("/Scripts/TMSearch.js");
-    }
-})(jQuery);
+//(function ($) {
+//    var o = $(".search-form");
+//    if (o.length > 0) {
+//        include("/Scripts/TMSearch.js");
+//    }
+//})(jQuery);
 
 
 
@@ -437,25 +437,25 @@ include("/Scripts/jquery.easing.1.3.js");
 
 /* FancyBox
 ========================================================*/
-;(function ($) {
-    var o = $(".thumb");
-    if (o.length > 0) {
-        include("/Scripts/jquery.fancybox.js");
-        include("/Scripts/jquery.fancybox-media.js");
-        include("/Scripts/jquery.fancybox-buttons.js");
-        $(document).ready(function () {
-            o.fancybox();
-        });
-    }
-})(jQuery);
+//;(function ($) {
+//    var o = $(".thumb");
+//    if (o.length > 0) {
+//        include("/Scripts/jquery.fancybox.js");
+//        include("/Scripts/jquery.fancybox-media.js");
+//        include("/Scripts/jquery.fancybox-buttons.js");
+//        $(document).ready(function () {
+//            o.fancybox();
+//        });
+//    }
+//})(jQuery);
 
 ///* Scroll To
 // =============================================*/
-;(function ($) {
-    if($("header").hasClass("scrollto")) {
-        include("/Scripts/scrollTo.js");
-    }
-})(jQuery);
+//;(function ($) {
+//    if($("header").hasClass("scrollto")) {
+//        include("/Scripts/scrollTo.js");
+//    }
+//})(jQuery);
 
 
 /**
@@ -657,6 +657,6 @@ include("/Scripts/jquery.easing.1.3.js");
 
 /* Parallax
 =============================================*/
-(function () {
-    include("/Scripts/jquery.rd-parallax.js");
-})(jQuery);
+//(function () {
+//    include("/Scripts/jquery.rd-parallax.js");
+//})(jQuery);

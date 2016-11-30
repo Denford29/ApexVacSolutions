@@ -5,6 +5,7 @@
     var contactEmail = "contact@apexvacsolutions.com.au";
     var contactMobile1 = "0458 503 751";
     var contactMobile2 = "0429 829 787";
+    var siteFacebook = "https://www.facebook.com/andrewandben";
     if (siteSetting != null && siteSetting.Id > 0 && siteSetting.Descendants("SiteDetails").Any())
     {
         var siteDetailsPage = siteSetting.Descendants("SiteDetails").FirstOrDefault();
@@ -22,6 +23,10 @@
             {
                 contactMobile2 = siteDetailsPage.GetPropertyValue("sitePhoneNumber2").ToString();
             }
+            if (siteDetailsPage.HasProperty("facebookPage") && siteDetailsPage.HasValue("facebookPage"))
+            {
+                siteFacebook = siteDetailsPage.GetPropertyValue("facebookPage").ToString();
+            }
         }
     }
 
@@ -29,33 +34,42 @@
         <div class="container">
             <div class="mailform-sub">
                 <div class="row">
+                    <p class="col-md-12">
+                        Get in touch with us...
+                    </p>
                     <div class="col-md-4">
-                        <p>
+                        @*<p>
                             Get in touch with us...
-                        </p>
+                        </p>*@
                         <ul class="link-list">
                             <li>
-                                <a href="#">
+                                <a href="mailto:@contactEmail" target="_blank">
                                     <span class="icon fa-envelope"></span>
                                     @contactEmail
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="tel:@contactMobile1">
                                     <span class="icon fa-phone"></span>
                                     @contactMobile1
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="tel:@contactMobile2">
                                     <span class="icon fa-phone"></span>
                                     @contactMobile2
                                 </a>
                             </li>
                             <li>
+                                <a href="@siteFacebook" target="_blank" title="Follow us on Facebook.">
+                                    <span class="icon fa-facebook"></span>
+                                    @*@siteFacebook*@
+                                    APEX Vac Solutions on Facebook
+                                </a>
+                            </li>
                         </ul>
                     </div>
-                    
+
                     @Html.Action("GetContactForm", "ContactSurface")
 
                 </div>

@@ -34,7 +34,7 @@ namespace apexvacsolutions.Controllers
             //    return CurrentUmbracoPage();
             //}
 
-            var emailAddress = "denfordmutseriwa@yahoo.com";
+            var emailAddress = "sitemail@rdmonline.com.au";
             var siteSetting = Umbraco.TypedContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "GlobalSettings");
             if (siteSetting != null && siteSetting.Id > 0 && siteSetting.Descendants("SiteDetails").Any())
             {
@@ -61,7 +61,7 @@ namespace apexvacsolutions.Controllers
                 };
                 userEmailMessage.To.Add(new MailAddress(formContactModel.EmailAddress.Trim(),
                     formContactModel.FullName.Trim()));
-                userEmailMessage.Bcc.Add("denfordmutseriwa@yahoo.com");
+                userEmailMessage.Bcc.Add("sitemail@rdmonline.com.au");
                 userEmailMessage.IsBodyHtml = true;
                 var userSmtpClient = new SmtpClient();
                 userSmtpClient.Send(userEmailMessage);
@@ -102,7 +102,7 @@ namespace apexvacsolutions.Controllers
                     From = new MailAddress("contact@apexvacsolutions.com.au", "Web Team")
                 };
                 adminEmaillMessage.To.Add(new MailAddress(emailAddress, "Admin"));
-                adminEmaillMessage.Bcc.Add("denfordmutseriwa@yahoo.com");
+                adminEmaillMessage.Bcc.Add("sitemail@rdmonline.com.au");
                 adminEmaillMessage.IsBodyHtml = true;
                 var adminSmtpClient = new SmtpClient();
                 adminSmtpClient.Send(adminEmaillMessage);

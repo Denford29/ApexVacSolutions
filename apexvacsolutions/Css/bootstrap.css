@@ -1754,7 +1754,7 @@ th {
     left: 0;
     bottom: -56px;
     width: 240px;
-    padding: 132px 0 76px;
+    padding: 140px 0 76px;
     color: #666666;
     background: rgba(255, 255, 255, 0.97);
     font-size: 14px;
@@ -1918,7 +1918,7 @@ th {
     top: 0;
     left: 0;
     right: 0;
-    height: 56px;
+    height: 80px;
     background: #ffffff;
     color: #000000;
     -moz-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
@@ -7728,7 +7728,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     }
 
         .navbar-nav > li {
-            float: left;
+            float: right;
         }
 
             .navbar-nav > li > a {
@@ -11471,4 +11471,38 @@ button.close {
 
 .m-b-20 {
     margin-bottom: 20px !important;
+}
+
+@media (max-width: 767px) {
+    .rd-mobilepanel_title img {
+        width: 80%;
+        max-height: 80px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /*.navbar-header {
+        float: none;
+    }*/
+    .navbar-header a {
+        text-align: center;
+    }
+    .navbar-nav {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 0;
+    }
+    .navbar-nav > li {
+            float: left;
+        }
+    .row .col-sm-4 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media (min-width: 1200px) {
 }

@@ -790,6 +790,7 @@
     <Content Include="Views\Partials\Search\SearchResults.cshtml" />
     <Content Include="Views\SearchPage.cshtml" />
     <Content Include="App_Code\pagingtemplate.cshtml" />
+    <Content Include="Views\sitemap.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

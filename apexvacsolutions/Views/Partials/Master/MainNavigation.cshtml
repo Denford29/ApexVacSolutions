@@ -28,31 +28,31 @@
         <div id="stuck_container" class="stuck_container">
             <nav class="navbar navbar-default navbar-static-top ">
                 <div class="container">
-                    <div class="navbar-header">
-                        <h1 class="navbar-brand">
-                            <a data-type="rd-navbar-brand" href="/" title="@siteDefaultName">
-                                <img src="@logoImageUrl" alt="@siteDefaultName" />
-                            </a>
-                        </h1>
-                    </div>
+                    <div class="row">
 
-                    @if (homePage != null && homePage.Id > 0)
-                    {
-                        var homeTitle = homePage.Name;
-                        if (homePage.HasProperty("linkTittle") && homePage.HasValue("linkTittle"))
-                        {
-                            homeTitle = homePage.GetPropertyValue("linkTittle").ToString();
-                        }
-                        <ul class="navbar-nav sf-menu navbar-right" data-type="navbar">
-                            <li @(homePage.Id == Model.Content.Id ? "class=active" : null)>
-                                <a href="/" title="@homeTitle - @siteDefaultName">
-                                    @homeTitle
+                        <div class="navbar-header col-md-5  col-sm-4">
+                            <h1 class="navbar-brand">
+                                <a data-type="rd-navbar-brand" href="/" title="@siteDefaultName">
+                                    <img src="@logoImageUrl" alt="@siteDefaultName" />
                                 </a>
-                            </li>
+                            </h1>
+                        </div>
 
-                            @if (homePage.Children.Any())
+                        @if (homePage != null && homePage.Id > 0)
+                        {
+                            var homeTitle = homePage.Name;
+                            if (homePage.HasProperty("linkTittle") && homePage.HasValue("linkTittle"))
                             {
-                                foreach (var landingPage in homePage.Children.Where(childPage => childPage.IsVisible() && !childPage.GetPropertyValue<bool>("hideFromMenu")))
+                                homeTitle = homePage.GetPropertyValue("linkTittle").ToString();
+                            }
+                            <ul class="navbar-nav sf-menu navbar-right col-md-7 col-sm-8" data-type="navbar">
+
+                                @if (homePage.Children.Any())
+                            {
+                                foreach (var landingPage in homePage.Children.Where(
+                                    childPage => childPage.IsVisible() &&
+                                                 !childPage.GetPropertyValue<bool>("hideFromMenu"))
+                                    .OrderByDescending(childPage => childPage.Id))
                                 {
                                     var pageTitle = landingPage.Name;
                                     if (landingPage.HasProperty("linkTittle") && landingPage.HasValue("linkTittle"))
@@ -94,33 +94,15 @@
                                 }
                             }
 
-                            @*<li>
-                                    <a href="/">About</a>
+                                <li @(homePage.Id == Model.Content.Id ? "class=active" : null)>
+                                    <a href="/" title="@homeTitle - @siteDefaultName">
+                                        @homeTitle
+                                    </a>
                                 </li>
 
-                                <li class="dropdown">
-                                    <a href="/">Hydro Excavation Services</a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="#">Trenching</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Pot Holing</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Debris Removal</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Exposing Utilities</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <a href="/">Contacts</a>
-                                </li>*@
-                        </ul>
-                    }
+                            </ul>
+                        }
+                    </div>
                 </div>
             </nav>
 

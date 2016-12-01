@@ -46,7 +46,7 @@ div.sform {
 }
 @media (max-width: 1199px) {
   .search-form {
-    top: 85px;
+    top: 95px;
     right: 10%;
   }
 }

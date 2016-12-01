@@ -35,7 +35,7 @@
                 
                 @if (choicesItemList.Any())
                 {
-                    <div class="row">
+                    <div class="row choicesItems">
                         <ul class="icon-list wow fadeInLeft" data-wow-duration="2s">
                             @foreach (var choiceItem in choicesItemList)
                             {
@@ -44,7 +44,7 @@
                                 {
                                     iconText = choiceItem.GetPropertyValue("icon").ToString();
                                 }
-                                <li class="col-md-4 col-sm-6 col-xs-12">
+                                <li class="col-md-4 col-sm-6 col-xs-12 choicesItem">
                                     <div class="row">
                                         <div class="col-sm-3 p-r-0 iconContainer">
                                             <span class="fontAwesome icon @iconText fa-3x fa-fw pull-right"></span>

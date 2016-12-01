@@ -37,14 +37,14 @@ function isIE() {
         //include("/Scripts/jquery.ui.totop.js");
 
         $(document).ready(function () {
-            $().UItoTop({easingType: "easeOutQuart"});
+            $().UItoTop({ easingType: "easeOutQuart" });
         });
     }
 })(jQuery);
 
 /* EqualHeights
  ========================================================*/
-
+//;
 //(function ($) {
 //    var o = $("[data-equal-group]");
 //    if (o.length > 0) {
@@ -65,15 +65,15 @@ function isIE() {
 //})(jQuery);
 
 
-//(function ($) {
-//    function include(url) {
-//	document.write('<script src="/scripts/' + url + '"></script>');
-//	return false;
-//}
-//	//include("superfish.js");
-//	jQuery(function () {
-//});
-//})(jQuery);
+(function ($) {
+    function include(url) {
+        document.write('<script src="/scripts/' + url + '"></script>');
+        return false;
+    }
+    //include("superfish.js");
+    jQuery(function () {
+    });
+})(jQuery);
 
 /* Responsive Tabs
  ========================================================*/
@@ -124,33 +124,35 @@ function isIE() {
 //        $(document).ready(function () {
 //            var o = $("#google-map");
 //            if (o.length > 0) {
-//                o.googleMap({styles:[{
-//                    "featureType": "all",
-//                    "elementType": "all",
-//                    "stylers": [
-//                        {
-//                            "hue": "#ffbb00"
-//                        }
-//                    ]
-//                },
-//                    {
+//                o.googleMap({
+//                    styles: [{
 //                        "featureType": "all",
-//                        "elementType": "geometry.fill",
+//                        "elementType": "all",
 //                        "stylers": [
 //                            {
 //                                "hue": "#ffbb00"
 //                            }
 //                        ]
 //                    },
-//                    {
-//                        "featureType": "all",
-//                        "elementType": "labels.text.fill",
-//                        "stylers": [
-//                            {
-//                                "hue": "#ffbb00"
-//                            }
-//                        ]
-//                    }]});
+//                        {
+//                            "featureType": "all",
+//                            "elementType": "geometry.fill",
+//                            "stylers": [
+//                                {
+//                                    "hue": "#ffbb00"
+//                                }
+//                            ]
+//                        },
+//                        {
+//                            "featureType": "all",
+//                            "elementType": "labels.text.fill",
+//                            "stylers": [
+//                                {
+//                                    "hue": "#ffbb00"
+//                                }
+//                            ]
+//                        }]
+//                });
 //            }
 //        });
 //    }
@@ -384,6 +386,10 @@ function isIE() {
 //    }
 //})(jQuery);
 
+//(function ($) {
+//        include("/Scripts/TMSearch.js");
+//})(jQuery);
+
 
 
 /* Facebook
@@ -437,7 +443,7 @@ function isIE() {
 
 /* FancyBox
 ========================================================*/
-//;(function ($) {
+//; (function ($) {
 //    var o = $(".thumb");
 //    if (o.length > 0) {
 //        include("/Scripts/jquery.fancybox.js");
@@ -451,8 +457,8 @@ function isIE() {
 
 ///* Scroll To
 // =============================================*/
-//;(function ($) {
-//    if($("header").hasClass("scrollto")) {
+//; (function ($) {
+//    if ($("header").hasClass("scrollto")) {
 //        include("/Scripts/scrollTo.js");
 //    }
 //})(jQuery);

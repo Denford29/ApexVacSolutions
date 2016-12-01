@@ -1918,7 +1918,7 @@ th {
     top: 0;
     left: 0;
     right: 0;
-    height: 80px;
+    height: 90px;
     background: #ffffff;
     color: #000000;
     -moz-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
@@ -11478,6 +11478,33 @@ button.close {
         width: 80%;
         max-height: 80px;
     }
+
+    .well3 {
+        margin-top: 10px;
+    }
+
+    .row.choicesItems {
+        margin-top: 10px;
+    }
+
+    .icon-list li.choicesItem {
+        margin: 10px 0;
+        width: 90%;
+    }
+
+    .row .col-sm-6 {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .link-list {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .well-14 {
+        padding-bottom: 0;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -11487,18 +11514,21 @@ button.close {
     .navbar-header a {
         text-align: center;
     }
+
     .navbar-nav {
         padding-left: 15px;
         padding-right: 15px;
         padding-top: 0;
     }
-    .navbar-nav > li {
+
+        .navbar-nav > li {
             float: left;
         }
+
     .row .col-sm-4 {
-    margin-bottom: 0;
-    margin-top: 0;
-}
+        margin-bottom: 0;
+        margin-top: 0;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {

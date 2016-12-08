@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using Umbraco.Core.Logging;
 using Umbraco.Web;
 using Umbraco.Web.Mvc;
+using System.Net;
 
 namespace apexvacsolutions.Controllers
 {
@@ -57,13 +58,15 @@ namespace apexvacsolutions.Controllers
                 {
                     Subject = "Your Contact on Apex Vac Solutions",
                     Body = mailBody,
-                    From = new MailAddress("contact@apexvacsolutions.com.au", "Admin")
+                    From = new MailAddress("admin@apexvacsolutions.com.au", "Admin")
                 };
                 userEmailMessage.To.Add(new MailAddress(formContactModel.EmailAddress.Trim(),
                     formContactModel.FullName.Trim()));
                 userEmailMessage.Bcc.Add("sitemail@rdmonline.com.au");
                 userEmailMessage.IsBodyHtml = true;
-                var userSmtpClient = new SmtpClient();
+                //var userSmtpClient = new SmtpClient();
+                var userSmtpClient = new SmtpClient("smtp.office365.com", 587);
+                //userSmtpClient.Credentials = new NetworkCredential("admin@apexvacsolutions.com.au", "Qoma7286");
                 userSmtpClient.Send(userEmailMessage);
             }
             catch (Exception ex)
@@ -75,11 +78,12 @@ namespace apexvacsolutions.Controllers
                 {
                     Subject = "Website error on Apex Vac Solutions.",
                     Body = errorMessage,
-                    From = new MailAddress("contact@apexvacsolutions.com.au", "Web Team")
+                    From = new MailAddress("admin@apexvacsolutions.com.au", "Web Team")
                 };
                 errorEmaillMessage.To.Add(new MailAddress("denfordmutseriwa@yahoo.com", "Denford"));
                 errorEmaillMessage.IsBodyHtml = true;
-                var errorSmtpClient = new SmtpClient();
+                //var errorSmtpClient = new SmtpClient();
+                var errorSmtpClient = new SmtpClient("smtp.office365.com", 587);
                 errorSmtpClient.Send(errorEmaillMessage);
 
                 hasEmailError = true;
@@ -99,12 +103,13 @@ namespace apexvacsolutions.Controllers
                 {
                     Subject = "The contact form has been submited on Apex Vac Solutions",
                     Body = adminMailBody,
-                    From = new MailAddress("contact@apexvacsolutions.com.au", "Web Team")
+                    From = new MailAddress("admin@apexvacsolutions.com.au", "Web Team")
                 };
                 adminEmaillMessage.To.Add(new MailAddress(emailAddress, "Admin"));
                 adminEmaillMessage.Bcc.Add("sitemail@rdmonline.com.au");
                 adminEmaillMessage.IsBodyHtml = true;
-                var adminSmtpClient = new SmtpClient();
+                //var adminSmtpClient = new SmtpClient();
+                var adminSmtpClient = new SmtpClient("smtp.office365.com", 587);
                 adminSmtpClient.Send(adminEmaillMessage);
             }
             catch (Exception ex)
@@ -116,11 +121,12 @@ namespace apexvacsolutions.Controllers
                 {
                     Subject = "Admin email error on Apex Vac Solutions",
                     Body = errorMessage,
-                    From = new MailAddress("contact@apexvacsolutions.com.au", "Web Team")
+                    From = new MailAddress("admin@apexvacsolutions.com.au", "Web Team")
                 };
                 errorEmaillMessage.To.Add(new MailAddress("denfordmutseriwa@yahoo.com", "Denford"));
                 errorEmaillMessage.IsBodyHtml = true;
-                var errorSmtpClient = new SmtpClient();
+                //var errorSmtpClient = new SmtpClient();
+                var errorSmtpClient = new SmtpClient("smtp.office365.com", 587);
                 errorSmtpClient.Send(errorEmaillMessage);
 
                 hasEmailError = true;

@@ -66,7 +66,6 @@ namespace apexvacsolutions.Controllers
                 userEmailMessage.IsBodyHtml = true;
                 //var userSmtpClient = new SmtpClient();
                 var userSmtpClient = new SmtpClient("smtp.office365.com", 587);
-                //userSmtpClient.Credentials = new NetworkCredential("admin@apexvacsolutions.com.au", "Qoma7286");
                 userSmtpClient.Send(userEmailMessage);
             }
             catch (Exception ex)

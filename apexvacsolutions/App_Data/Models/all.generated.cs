@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "d255ecaa4fc4d82f")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "4c9a45b219d64426")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -479,6 +479,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public string MainHeaderLogo
 		{
 			get { return this.GetPropertyValue<string>("mainHeaderLogo"); }
+		}
+
+		///<summary>
+		/// Site Address
+		///</summary>
+		[ImplementPropertyType("siteAddress")]
+		public string SiteAddress
+		{
+			get { return this.GetPropertyValue<string>("siteAddress"); }
 		}
 
 		///<summary>

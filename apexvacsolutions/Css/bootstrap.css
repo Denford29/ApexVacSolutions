@@ -3585,11 +3585,11 @@ p.big {
 
 .link-list {
     min-width: 100px;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
     .link-list .icon {
-        font-size: 15px;
+        /*font-size: 15px;*/
         display: inline-block;
         margin-right: 7px;
     }
@@ -3602,13 +3602,19 @@ p.big {
         }
 
     .link-list li {
-        font-size: 15px;
+        padding: 15px 0;
+        font-size: 22px;
         line-height: 21px;
         text-transform: uppercase;
+        word-wrap: break-word;
     }
 
         .link-list li + li {
             margin-top: 8px;
+        }
+
+        .mailform-sub h4 {
+            font-size: 26px;
         }
 
         /*.link-list li a:hover {
@@ -11505,6 +11511,19 @@ button.close {
     .well-14 {
         padding-bottom: 0;
     }
+
+    .link-list li {
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    .mailform-sub h4 {
+            font-size: 18px;
+        }
+
+    .mailform-sub .fb_iframe_widget {
+        width: 80%;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -11528,6 +11547,19 @@ button.close {
     .row .col-sm-4 {
         margin-bottom: 0;
         margin-top: 0;
+    }
+
+    .link-list li {
+        padding: 10px 0;
+        font-size: 20px;
+    }
+
+    .mailform-sub h4 {
+            font-size: 22px;
+        }
+
+    .mailform-sub .fb_iframe_widget {
+        width: 100%;
     }
 }
 
